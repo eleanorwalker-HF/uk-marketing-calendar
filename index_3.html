@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Marketing Calendar 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F6EF;--card:#FFFFFF;--ink:#15251B;--ink-soft:#4A5A4F;--line:#DCE3D6;
+  --green:#067A46;--green-deep:#04502E;--lime:#A9CF38;--lime-soft:#EDF4D4;
+  --amber:#DF9A2E;--amber-soft:#FBF0DA;--red:#CE4438;--red-soft:#FBE6E3;
+  --blue:#3D6FA8;--purple:#7B5EA7;
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
+  --sans:'Archivo',-apple-system,'Segoe UI',Roboto,sans-serif;
+  --brand:#3D6FA8;--brand-bg:#E4EDF7;--brand-text:#2A4F7A;
+  --growth:#067A46;--growth-bg:#E0F2EA;--growth-text:#04502E;
+  --partner:#7B5EA7;--partner-bg:#EDE8F5;--partner-text:#5A3F88;
+  --discount:#DF9A2E;--discount-bg:#FBF0DA;--discount-text:#8A5308;
+  --pricing:#CE4438;--pricing-bg:#FBE6E3;--pricing-text:#922E25;
+  --row-h:28px;
+  --label-w:240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:3px}
+input,select,textarea{font-family:inherit}
+
+/* ── LAYOUT SHELL ───────────────────────── */
+.app{display:flex;flex-direction:column;height:100vh}
+.gantt-outer{flex:1;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.gantt-body{flex:1;overflow:auto;position:relative}
+
+/* ── HEADER ─────────────────────────────── */
+header{background:var(--green-deep);color:#F2F7EC;padding:20px 28px 0;position:relative;overflow:hidden;flex-shrink:0}
+header::after{content:"";position:absolute;right:-60px;top:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(169,207,56,.2),transparent 68%);pointer-events:none}
+.hd-top{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:1;margin-bottom:18px}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:4px}
+h1{font-variation-settings:'wdth' 118;font-weight:850;font-size:clamp(20px,3vw,30px);line-height:1;letter-spacing:-.01em}
+h1 .yr{color:var(--lime)}
+.btn-settings{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:10px;color:#C8DCCA;padding:8px 16px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;transition:all .14s;white-space:nowrap}
+.btn-settings:hover{background:rgba(255,255,255,.2);color:#fff}
+
+/* ── CONTROL STRIP (mode + zoom, below title) ── */
+.hd-controls{position:relative;z-index:1;display:flex;align-items:stretch;gap:0;border-top:1px solid rgba(255,255,255,.12);margin:0 -28px}
+.ctrl-section{display:flex;align-items:center;gap:3px;padding:0 24px;border-right:1px solid rgba(255,255,255,.12)}
+.ctrl-section:last-child{border-right:none;margin-left:auto}
+.ctrl-label{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-right:4px;white-space:nowrap}
+
+/* mode tabs — large */
+.mtab{background:transparent;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,.5);padding:14px 20px;font-size:14px;font-weight:800;letter-spacing:.01em;transition:all .16s;white-space:nowrap}
+.mtab.on{color:#fff;border-bottom-color:var(--lime)}
+.mtab:hover:not(.on){color:rgba(255,255,255,.8);border-bottom-color:rgba(169,207,56,.35)}
+
+/* zoom tabs — clear pill style */
+.ztab{background:transparent;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,.45);padding:14px 16px;font-size:13px;font-weight:700;font-family:var(--mono);transition:all .16s;white-space:nowrap}
+.ztab.on{color:var(--lime);border-bottom-color:var(--lime)}
+.ztab:hover:not(.on){color:rgba(255,255,255,.75)}
+
+/* ── ADD FORM ────────────────────────────── */
+.add-strip{background:var(--green-deep);padding:0 28px 14px;border-bottom:2px solid rgba(169,207,56,.18);flex-shrink:0}
+.add-toggle{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1.5px solid rgba(169,207,56,.28);border-radius:10px;padding:9px 16px;cursor:pointer;width:100%;text-align:left;color:#EAF2E6;font-size:13px;font-weight:700;transition:all .14s}
+.add-toggle:hover{background:rgba(255,255,255,.12)}
+.add-toggle .plus{width:22px;height:22px;background:var(--lime);color:var(--green-deep);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex-shrink:0;transition:transform .15s}
+.add-toggle.open .plus{transform:rotate(45deg)}
+.add-form{display:none;margin-top:10px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px}
+.add-form.show{display:block}
+.fg-row{display:grid;gap:10px;margin-bottom:10px}
+.fg-row.c5{grid-template-columns:2fr 1fr 1fr 1fr 1fr}
+.fg-row.c3{grid-template-columns:1fr 1fr 1fr}
+.fg-row.c2{grid-template-columns:1fr 1fr}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9FBBA0;font-weight:600}
+.fg input,.fg select,.fg textarea{background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:7px 10px;font-size:12.5px;transition:border-color .12s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--lime)}
+.fg select option{background:#15251B}
+.fg textarea{min-height:52px;resize:vertical}
+.fin-multi{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.fin-opt{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:999px;padding:3px 10px;font-size:11.5px;font-weight:700;color:#C9D9C5;cursor:pointer;transition:all .12s;font-family:inherit}
+.fin-opt.sel{background:rgba(169,207,56,.22);border-color:rgba(169,207,56,.6);color:var(--lime)}
+.tag-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.tag-chip{background:rgba(169,207,56,.16);border:1px solid rgba(169,207,56,.38);color:var(--lime);border-radius:999px;padding:2px 8px 2px 10px;font-size:11px;font-weight:700;display:flex;align-items:center;gap:4px}
+.tag-chip .rm{background:none;border:none;color:var(--lime);font-size:13px;line-height:1;padding:0;cursor:pointer}
+.cond-panel{margin-top:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px;display:none}
+.cond-panel.show{display:block}
+.cond-panel .cp-title{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.price-change-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.price-change-row label{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#EAF2E6;cursor:pointer;font-weight:700}
+.price-change-row input[type=checkbox]{width:15px;height:15px;accent-color:var(--lime);cursor:pointer}
+.price-change-fields{display:none}
+.price-change-fields.show{display:block}
+.form-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.btn-submit{background:var(--lime);color:var(--green-deep);border:none;border-radius:8px;padding:8px 22px;font-size:13px;font-weight:800;transition:filter .12s}
+.btn-submit:hover{filter:brightness(1.08)}
+.btn-cancel-f{background:transparent;border:1px solid rgba(255,255,255,.25);color:#C9D9C5;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:700}
+.btn-cancel-f:hover{background:rgba(255,255,255,.08)}
+.form-err{font-family:var(--mono);font-size:11px;color:#F5A79E}
+
+/* ── FILTER BAR ──────────────────────────── */
+.filter-wrap{background:var(--card);border-bottom:1px solid var(--line);padding:8px 28px;flex-shrink:0;display:flex;flex-direction:column;gap:5px}
+.filter-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.fr-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;min-width:78px}
+.fchip{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:3px 11px;font-size:11.5px;font-weight:700;color:var(--ink-soft);cursor:pointer;transition:all .12s;font-family:inherit}
+.fchip:hover{border-color:var(--green);color:var(--green)}
+.fchip.on{border-color:transparent;color:#fff}
+.fchip.fc-all.on,.fchip.ff-all.on{background:var(--green-deep)}
+.fchip.fc-brand.on{background:var(--brand)}
+.fchip.fc-growth.on{background:var(--growth)}
+.fchip.fc-partner.on{background:var(--partner)}
+.fchip.fc-discount.on{background:var(--discount)}
+.fchip.fc-pricing.on{background:var(--pricing)}
+.fchip.ff-paid.on{background:#2A8B8B}
+.fchip.ff-reactivation.on{background:#7B5EA7}
+.fchip.ff-referrals.on{background:#3D6FA8}
+
+/* ── GANTT NAV ───────────────────────────── */
+.gantt-nav{display:flex;align-items:center;gap:8px;padding:7px 28px;background:#FAFCF7;border-bottom:1px solid var(--line);flex-shrink:0;flex-wrap:wrap}
+.gantt-period{font-family:var(--mono);font-weight:700;font-size:12.5px;color:var(--ink)}
+.nav-btn{background:var(--paper);border:1px solid var(--line);border-radius:7px;color:var(--ink-soft);padding:4px 12px;font-size:12px;font-weight:700;transition:all .12s}
+.nav-btn:hover{border-color:var(--green);color:var(--green)}
+.nav-today{background:var(--green-deep);color:#fff;border-color:var(--green-deep)}
+.nav-today:hover{background:var(--green);border-color:var(--green)}
+
+/* ── GANTT TABLE ─────────────────────────── */
+/* KEY FIX: sticky left column must have a solid bg that covers scrolling content */
+.gt{border-collapse:collapse;table-layout:fixed;min-width:100%}
+
+/* Corner cell — top-left, always visible */
+.gt-corner{
+  position:sticky;left:0;top:0;z-index:30;
+  background:#FAFCF7;
+  width:var(--label-w);min-width:var(--label-w);
+  border-right:2px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+/* Column headers — sticky top only */
+.gt-col-head{
+  position:sticky;top:0;z-index:10;
+  background:#FAFCF7;
+  border-bottom:1px solid var(--line);border-right:1px solid var(--line);
+  text-align:center;padding:5px 2px;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;color:var(--ink-soft);
+  white-space:nowrap;user-select:none;overflow:hidden;
+}
+.gt-col-head.today-head{background:var(--lime-soft);color:var(--green-deep);font-weight:800;border-bottom:3px solid var(--lime);}
+
+
+/* Section rows (category headers) */
+.gt-sec td{
+  background:#F0F5EC;
+  padding:5px 8px 5px 10px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;user-select:none;
+}
+/* The LABEL cell in a section row must be sticky left */
+.gt-sec td.sec-td{
+  position:sticky;left:0;z-index:12;
+  background:#F0F5EC;
+  border-right:2px solid var(--line);
+  width:var(--label-w);min-width:var(--label-w);
+}
+.sec-label{
+  font-family:var(--mono);font-size:9.5px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  display:flex;align-items:center;gap:6px;
+  white-space:nowrap;
+}
+.caret{display:inline-block;font-size:8px;transition:transform .18s;color:var(--ink-soft);flex-shrink:0}
+.collapsed .caret{transform:rotate(-90deg)}
+
+/* Sub-section rows (channel headers) */
+.gt-sub td{
+  background:#F7FAF5;
+  padding:4px 8px 4px 24px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;user-select:none;
+}
+.gt-sub td.sub-td{
+  position:sticky;left:0;z-index:11;
+  background:#F7FAF5;
+  border-right:2px solid var(--line);
+  width:var(--label-w);min-width:var(--label-w);
+}
+.sub-label{
+  font-family:var(--mono);font-size:9px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-soft);display:flex;align-items:center;gap:5px;
+  white-space:nowrap;
+}
+
+/* Activity rows */
+.gt-act td{
+  background:var(--card);
+  border-bottom:1px solid var(--line);
+  height:var(--row-h);padding:0;vertical-align:middle;
+}
+/* THE KEY FIX: label cell in activity row sticky left with solid opaque background */
+.gt-act td.row-label-td{
+  position:sticky;left:0;z-index:6;
+  background:#FFFFFF;
+  border-right:2px solid var(--line);
+  width:var(--label-w);min-width:var(--label-w);
+  height:var(--row-h);
+  padding:0 6px 0 32px;
+  font-size:11px;color:var(--ink-soft);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  display:table-cell;vertical-align:middle;
+}
+.bar-cell{position:relative;height:var(--row-h)}
+.bar{
+  position:absolute;top:4px;bottom:4px;
+  border-radius:4px;
+  display:flex;align-items:center;padding:0 6px;
+  font-size:10px;font-weight:700;white-space:nowrap;overflow:hidden;
+  cursor:pointer;transition:filter .12s,box-shadow .12s;z-index:2;
+}
+.bar:hover{filter:brightness(1.1);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.bar.brand{background:var(--brand);color:#fff}
+.bar.growth{background:var(--growth);color:#fff}
+.bar.partner{background:var(--partner);color:#fff}
+.bar.discount{background:var(--discount);color:#3A2A08}
+.bar.pricing{background:var(--pricing);color:#fff}
+
+
+
+/* ── TOOLTIP ── */
+.bar-tooltip{
+  position:fixed;z-index:9999;
+  background:#15251B;color:#EAF2E6;
+  border-radius:9px;padding:10px 13px;
+  font-size:12px;line-height:1.5;
+  box-shadow:0 8px 24px rgba(0,0,0,.28);
+  pointer-events:none;opacity:0;
+  transition:opacity .12s;
+  max-width:240px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.bar-tooltip.show{opacity:1}
+.bar-tooltip .tt-name{font-weight:800;font-size:13px;margin-bottom:5px;color:#fff}
+.bar-tooltip .tt-row{display:flex;gap:6px;align-items:baseline;font-size:11px}
+.bar-tooltip .tt-key{font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:#8FAC8E;min-width:52px}
+
+/* ── CONFETTI CANVAS ── */
+#confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:9998;display:none}
+
+/* ── PRICE CHANGE BANNER ROW ── */
+.pc-banner-td{
+  position:sticky;left:0;z-index:6;
+  background:#FBE6E3;
+  border-right:2px solid var(--line);
+  width:var(--label-w);min-width:var(--label-w);
+  height:22px;
+  padding:0 10px 0 14px;
+  display:table-cell;vertical-align:middle;
+}
+.pc-banner-cell{
+  position:relative;height:22px;
+  background:#FBE6E3;
+  border-bottom:1px solid rgba(206,68,56,.18);
+  border-right:1px solid rgba(206,68,56,.12);
+}
+.pc-flag{
+  position:absolute;top:3px;bottom:3px;
+  background:var(--red);
+  border-radius:3px;
+  display:flex;align-items:center;padding:0 7px;
+  font-size:10px;font-weight:800;color:#fff;
+  white-space:nowrap;overflow:hidden;
+  cursor:pointer;z-index:2;
+  gap:5px;
+}
+.pc-flag:hover{filter:brightness(1.08);box-shadow:0 2px 8px rgba(206,68,56,.3)}
+tr.pc-banner-row td{
+  background:#FBE6E3;
+  border-bottom:1px solid rgba(206,68,56,.2);
+  height:22px;padding:0;vertical-align:middle;
+}
+.today-col{background:rgba(169,207,56,.18)}
+
+/* ── SETTINGS PANEL ─────────────────────── */
+.settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:900;display:none}
+.settings-overlay.show{display:block}
+.settings-panel{position:fixed;top:0;right:-480px;width:460px;max-width:100vw;height:100vh;background:var(--card);box-shadow:-8px 0 40px rgba(0,0,0,.2);z-index:901;display:flex;flex-direction:column;transition:right .28s cubic-bezier(.4,0,.2,1)}
+.settings-panel.show{right:0}
+.sp-header{background:var(--green-deep);color:#F2F7EC;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.sp-header h2{font-variation-settings:'wdth' 112;font-weight:800;font-size:17px}
+.sp-close{background:none;border:none;color:#C8DCCA;font-size:22px;cursor:pointer;line-height:1}
+.sp-close:hover{color:#fff}
+.sp-body{flex:1;overflow-y:auto;padding:20px}
+.sp-section{margin-bottom:26px}
+.sp-section h3{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:800;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sp-list{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;max-height:200px;overflow-y:auto}
+.sp-item{display:flex;align-items:center;justify-content:space-between;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12.5px}
+.sp-item .si-val{font-weight:600;color:var(--ink)}
+.sp-item .si-del{background:none;border:none;color:var(--ink-soft);font-size:14px;cursor:pointer;line-height:1}
+.sp-item .si-del:hover{color:var(--red)}
+.sp-add-row{display:flex;gap:6px}
+.sp-add-row input,.sp-add-row select{flex:1;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12.5px}
+.sp-add-row input:focus,.sp-add-row select:focus{outline:none;border-color:var(--green)}
+.btn-sp-add{background:var(--green-deep);color:#fff;border:none;border-radius:8px;padding:7px 14px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.btn-sp-add:hover{background:var(--green)}
+.sp-hint{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:6px;font-style:italic}
+
+/* ── CAMPAIGN BUILDER WIZARD ─────────────────── */
+.wiz-overlay{position:fixed;inset:0;background:rgba(4,80,46,.96);z-index:2000;display:none;flex-direction:column;overflow:hidden}
+.wiz-overlay.show{display:flex}
+.wiz-header{background:var(--green-deep);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12);flex-shrink:0}
+.wiz-header h2{font-variation-settings:'wdth' 118;font-weight:850;font-size:19px;color:#F2F7EC;display:flex;align-items:center;gap:10px}
+.wiz-close{background:none;border:none;color:#C8DCCA;font-size:22px;cursor:pointer;line-height:1}
+.wiz-close:hover{color:#fff}
+.wiz-steps{display:flex;padding:0 32px;background:var(--green-deep);border-bottom:2px solid rgba(169,207,56,.2);flex-shrink:0}
+.wiz-step-tab{padding:11px 18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.35);border-bottom:3px solid transparent;display:flex;align-items:center;gap:7px;cursor:pointer;transition:color .14s}
+.wiz-step-tab:hover{color:rgba(255,255,255,.6)}
+.wiz-step-tab.active{color:var(--lime);border-bottom-color:var(--lime)}
+.wiz-step-tab.done{color:rgba(255,255,255,.55)}
+.wiz-step-num{width:17px;height:17px;border-radius:50%;background:rgba(255,255,255,.12);font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.wiz-step-tab.active .wiz-step-num{background:var(--lime);color:var(--green-deep)}
+.wiz-step-tab.done .wiz-step-num{background:rgba(169,207,56,.35);color:#fff}
+.wiz-body{flex:1;overflow-y:auto;padding:28px 32px}
+.wiz-footer{background:var(--green-deep);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);flex-shrink:0}
+.wiz-hint{font-family:var(--mono);font-size:11px;color:#8FAC8E}
+.wiz-footer-btns{display:flex;gap:10px}
+.btn-wiz-back{background:transparent;border:1px solid rgba(255,255,255,.25);color:#C9D9C5;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:700}
+.btn-wiz-back:hover{background:rgba(255,255,255,.08)}
+.btn-wiz-next{background:var(--lime);color:var(--green-deep);border:none;border-radius:8px;padding:8px 22px;font-size:13px;font-weight:800;transition:filter .12s}
+.btn-wiz-next:hover:not(:disabled){filter:brightness(1.08)}
+.btn-wiz-next:disabled{opacity:.4;cursor:not-allowed}
+.wiz-panel{display:none}.wiz-panel.active{display:block}
+.wiz-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9FBBA0;font-weight:600;margin-bottom:5px;display:block}
+.wiz-input{background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:8px 11px;font-size:13px;width:100%;transition:border-color .12s}
+.wiz-input:focus{outline:none;border-color:var(--lime)}
+.wiz-input option{background:#15251B}
+.wiz-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.wiz-row.c3{grid-template-columns:1fr 1fr 1fr}
+.wiz-fg{margin-bottom:14px}
+.wiz-sec{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:700;margin:20px 0 12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.1)}
+/* channel grid */
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:9px;margin-bottom:8px}
+.ch-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.14);border-radius:10px;padding:11px 13px;cursor:pointer;transition:all .14s;position:relative;user-select:none;height:64px;display:flex;flex-direction:column;justify-content:center}
+.ch-card:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28)}
+.ch-card.selected{border-color:var(--lime);background:rgba(169,207,56,.13)}
+.ch-name{font-size:12.5px;font-weight:700;color:#EAF2E6;margin-bottom:2px}
+.ch-cat{font-family:var(--mono);font-size:9.5px;color:#8FAC8E}
+.ch-check{position:absolute;top:8px;right:8px;width:15px;height:15px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:9px}
+.ch-card.selected .ch-check{background:var(--lime);border-color:var(--lime);color:var(--green-deep)}
+.ch-count{background:rgba(169,207,56,.15);border:1px solid rgba(169,207,56,.3);color:var(--lime);border-radius:999px;padding:4px 13px;font-family:var(--mono);font-size:11px;font-weight:700;display:inline-flex;align-items:center;gap:6px;margin-bottom:16px}
+/* tune table */
+.tune-table{width:100%;border-collapse:collapse;margin-bottom:8px}
+.tune-table th{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:5px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+.tune-table td{padding:5px 8px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:middle}
+.tune-table tr:last-child td{border-bottom:none}
+.tune-input{background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:4px 7px;font-size:11.5px;font-family:inherit}
+.tune-input:focus{outline:none;border-color:var(--lime)}
+.tune-input.date-i{width:128px}
+.tune-input.name-i{width:100%}
+.btn-add-row{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#C9D9C5;border-radius:6px;padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer}
+.btn-add-row:hover{background:rgba(255,255,255,.13)}
+.btn-del-row{background:none;border:none;color:rgba(255,255,255,.25);font-size:14px;cursor:pointer;padding:0 3px;line-height:1}
+.btn-del-row:hover{color:var(--red)}
+.cat-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
+/* review */
+.review-list{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.review-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ri-name{font-size:13px;font-weight:700;color:#EAF2E6;flex:1;min-width:140px}
+.ri-dates{font-family:var(--mono);font-size:10px;color:#8FAC8E}
+.ri-cat{font-family:var(--mono);font-size:9px;font-weight:800;padding:2px 8px;border-radius:999px}
+.wiz-summary{background:rgba(169,207,56,.09);border:1px solid rgba(169,207,56,.22);border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;gap:24px;flex-wrap:wrap}
+.wsb-n{font-family:var(--mono);font-size:22px;font-weight:800;color:var(--lime);line-height:1;display:block}
+.wsb-l{font-size:11px;color:rgba(255,255,255,.45)}
+
+/* ── EVENT POPUP ────────────────────────── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;display:none;align-items:center;justify-content:center}
+.overlay.show{display:flex}
+.popup{background:#fff;border-radius:14px;padding:22px;max-width:440px;width:calc(100% - 32px);box-shadow:0 20px 60px rgba(0,0,0,.22);position:relative;max-height:90vh;overflow-y:auto}
+.pop-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;color:var(--ink-soft);cursor:pointer}
+.pop-close:hover{color:var(--red)}
+.pop-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.pop-name{font-variation-settings:'wdth' 112;font-weight:800;font-size:17px;color:var(--ink);margin-bottom:3px;line-height:1.25}
+.pop-dates{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-bottom:10px}
+.pop-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.pop-tag{background:var(--lime-soft);color:var(--green-deep);border:1px solid rgba(106,163,56,.3);border-radius:999px;padding:2px 8px;font-family:var(--mono);font-size:10px;font-weight:700}
+.pop-meta{display:grid;grid-template-columns:90px 1fr;gap:4px 8px;margin-bottom:10px}
+.pop-meta .k{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);padding-top:2px}
+.pop-meta .v{font-size:12.5px;color:var(--ink)}
+.pop-box{background:var(--paper);border-radius:7px;padding:9px 11px;font-size:12.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:10px}
+.pop-box-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:4px}
+.price-change-badge{display:inline-flex;align-items:center;gap:5px;background:var(--red-soft);color:var(--red);border:1px solid rgba(206,68,56,.3);border-radius:8px;padding:4px 10px;font-family:var(--mono);font-size:10.5px;font-weight:800;margin-bottom:10px;flex-wrap:wrap}
+.pop-actions{display:flex;gap:8px;margin-top:14px}
+.btn-del{background:var(--red-soft);color:var(--red);border:1px solid rgba(206,68,56,.25);border-radius:7px;padding:7px 13px;font-size:12.5px;font-weight:700}
+.btn-del:hover{background:var(--red);color:#fff}
+.btn-close-p{background:var(--green-deep);color:#fff;border:none;border-radius:7px;padding:7px 16px;font-size:12.5px;font-weight:700}
+.btn-close-p:hover{background:var(--green)}
+
+/* ── DATE PICKER FIELDS ── */
+.date-wrap{position:relative;display:flex;align-items:center}
+.date-wrap input[type=date]{padding-right:32px;cursor:pointer;width:100%}
+.date-wrap input[type=date]::-webkit-calendar-picker-indicator{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  opacity:0;width:24px;height:24px;cursor:pointer;z-index:2
+}
+.date-icon{position:absolute;right:9px;top:50%;transform:translateY(-50%);
+  font-size:14px;pointer-events:none;color:var(--lime);z-index:1
+}
+.ef-row{display:flex;flex-direction:column;gap:3px}
+.ef-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.ef-input{background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:7px;padding:6px 9px;font-size:13px;width:100%;transition:border-color .12s}
+.ef-input:focus{outline:none;border-color:var(--green)}
+.ef-input[type=date]{font-family:var(--mono)}
+textarea.ef-input{resize:vertical;min-height:48px}
+.ef-cond{background:var(--paper);border-radius:8px;padding:10px 12px;border:1px solid var(--line)}
+
+@media(max-width:700px){
+  :root{--label-w:140px}
+  .fg-row.c5,.fg-row.c3{grid-template-columns:1fr 1fr}
+  header,.add-strip,.filter-wrap,.gantt-nav{padding-left:14px;padding-right:14px}
+  .settings-panel{width:100vw}
+  .hd-controls{margin:0 -14px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- HEADER -->
+<header>
+  <div class="hd-top">
+    <div>
+      <div class="eyebrow">UK Marketing Team</div>
+      <h1>Marketing Calendar <span class="yr">2026</span></h1>
+    </div>
+    <button class="btn-settings" onclick="openSettings()" title="Add owners, tags &amp; custom channels here">⚙ Settings</button>
+  </div>
+
+  <!-- CONTROL STRIP: mode toggle + zoom toggle, full-width below title -->
+  <div class="hd-controls">
+    <div class="ctrl-section">
+      <span class="ctrl-label">View by</span>
+      <button class="mtab on" id="tab-campaign" onclick="setMode('campaign')">Campaign</button>
+      <button class="mtab" id="tab-group" onclick="setMode('group')">Category</button>
+    </div>
+    <div class="ctrl-section">
+      <span class="ctrl-label">Zoom</span>
+      <button class="ztab" onclick="setZoom('day')">Day</button>
+      <button class="ztab on" onclick="setZoom('week')">Week</button>
+      <button class="ztab" onclick="setZoom('month')">Month</button>
+      <button class="ztab" onclick="setZoom('quarter')">Quarter</button>
+    </div>
+  </div>
+</header>
+
+<!-- ADD FORM -->
+<div class="add-strip">
+  <div style="display:flex;gap:10px">
+    <button class="add-toggle" id="addToggle" onclick="toggleForm()" style="flex:1">
+      <span class="plus">+</span>
+      <span>Add Marketing Activity</span>
+      <span style="font-family:var(--mono);font-size:10px;color:#8FAC8E;margin-left:auto" id="addHint">Click to expand</span>
+    </button>
+    <button onclick="openWizard()" style="background:rgba(169,207,56,.15);border:1.5px solid rgba(169,207,56,.4);border-radius:10px;padding:9px 16px;color:var(--lime);font-size:13px;font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:8px;transition:all .14s;flex-shrink:0">
+      🧙 Campaign Builder Wizard
+    </button>
+  </div>
+  <div class="add-form" id="addForm">
+    <!-- Row 1: name, category, channel, start, end -->
+    <div class="fg-row c5">
+      <div class="fg">
+        <label>Activity Name *</label>
+        <input type="text" id="f-name" placeholder="e.g. Peak — Paid Social">
+      </div>
+      <div class="fg">
+        <label>Category *</label>
+        <select id="f-group" onchange="onGroupChange()">
+          <option value="">Select…</option>
+          <option value="brand">📺 Brand</option>
+          <option value="growth">📈 Growth</option>
+          <option value="partner">🤝 Partnerships / Affiliates</option>
+          <option value="discount">🏷 Discounts</option>
+          <option value="pricing">💰 Pricing</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Channel</label>
+        <select id="f-channel"><option value="">All / N/A</option></select>
+      </div>
+      <div class="fg">
+        <label>Start Date *</label>
+        <div class="date-wrap">
+          <input type="date" id="f-start">
+          <span class="date-icon">📅</span>
+        </div>
+      </div>
+      <div class="fg">
+        <label>End Date *</label>
+        <div class="date-wrap">
+          <input type="date" id="f-end">
+          <span class="date-icon">📅</span>
+        </div>
+      </div>
+    </div>
+    <!-- Row 2: campaign tag (restricted dropdown), owner, financial category -->
+    <div class="fg-row c3">
+      <div class="fg">
+        <label>Campaign Tag</label>
+        <select id="f-tag-select" onchange="addTagFromSelect()">
+          <option value="">Select a campaign tag…</option>
+        </select>
+        <input type="text" id="f-tag-new-inline" placeholder="Or type new tag + Enter to create"
+          style="margin-top:4px;background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:6px 10px;font-size:11.5px;width:100%"
+          onkeydown="addNewTagInline(event)">
+        <div class="tag-chips" id="f-tag-chips"></div>
+      </div>
+      <div class="fg">
+        <label>Owner</label>
+        <select id="f-owner"><option value="">Select owner…</option></select>
+        <div style="display:flex;gap:5px;margin-top:4px">
+          <input type="text" id="f-owner-new" placeholder="Or type new owner + Enter"
+            style="flex:1;background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:5px 9px;font-size:11.5px"
+            onkeydown="addNewOwnerInline(event,'f-owner','f-owner-new')">
+        </div>
+      </div>
+      <div class="fg">
+        <label>Financial Category</label>
+        <div class="fin-multi" id="f-fin-multi">
+          <button type="button" class="fin-opt" data-val="Paid" onclick="toggleFin(this)">Paid</button>
+          <button type="button" class="fin-opt" data-val="Reactivation" onclick="toggleFin(this)">Reactivation</button>
+          <button type="button" class="fin-opt" data-val="Referrals" onclick="toggleFin(this)">Referrals</button>
+        </div>
+      </div>
+    </div>
+    <!-- Row 3: notes -->
+    <div class="fg-row c2">
+      <div class="fg" style="grid-column:span 2">
+        <label>Notes</label>
+        <textarea id="f-notes" placeholder="Brief links, dependencies, key info…"></textarea>
+      </div>
+    </div>
+    <!-- Discount panel -->
+    <div class="cond-panel" id="panel-discount">
+      <div class="cp-title" style="color:var(--discount-text)"><span>🏷</span> Discount Detail</div>
+      <div class="fg">
+        <label>Discount structure / mechanic</label>
+        <textarea id="f-discount-notes" placeholder="e.g. 40% off first 4 boxes, min spend £30, code BACK40. Eligible: all plans." style="min-height:68px"></textarea>
+      </div>
+    </div>
+    <!-- Pricing panel -->
+    <div class="cond-panel" id="panel-pricing">
+      <div class="cp-title" style="color:var(--pricing-text)"><span>💰</span> Pricing Structure</div>
+      <div class="fg" style="margin-bottom:12px">
+        <label>Pricing description</label>
+        <textarea id="f-pricing-notes" placeholder="e.g. Classic box from £4.99/serving." style="min-height:68px"></textarea>
+      </div>
+      <div class="price-change-row">
+        <label>
+          <input type="checkbox" id="f-is-price-change" onchange="togglePriceChangeFields()">
+          This entry includes a pricing change
+        </label>
+      </div>
+      <div class="price-change-fields" id="price-change-fields">
+        <div class="fg-row c2">
+          <div class="fg">
+            <label>Change Date *</label>
+            <div class="date-wrap">
+              <input type="date" id="f-price-change-date">
+              <span class="date-icon">📅</span>
+            </div>
+          </div>
+          <div class="fg">
+            <label>Change Description</label>
+            <input type="text" id="f-price-change-desc" placeholder="e.g. Price increase: £4.49 → £4.99/serving">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn-submit" onclick="submitEvent()">Add to Calendar</button>
+      <button class="btn-cancel-f" onclick="toggleForm()">Cancel</button>
+      <span class="form-err" id="form-err"></span>
+    </div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filter-wrap">
+  <div class="filter-row">
+    <span class="fr-label">Category</span>
+    <button class="fchip fc-all on" onclick="toggleCatFilter('all')">All</button>
+    <button class="fchip fc-brand" onclick="toggleCatFilter('brand')">📺 Brand</button>
+    <button class="fchip fc-growth" onclick="toggleCatFilter('growth')">📈 Growth</button>
+    <button class="fchip fc-partner" onclick="toggleCatFilter('partner')">🤝 Partnerships</button>
+    <button class="fchip fc-discount" onclick="toggleCatFilter('discount')">🏷 Discounts</button>
+    <button class="fchip fc-pricing" onclick="toggleCatFilter('pricing')">💰 Pricing</button>
+  </div>
+  <div class="filter-row">
+    <span class="fr-label">Financial</span>
+    <button class="fchip ff-all on" onclick="toggleFinFilter('all')">All</button>
+    <button class="fchip ff-paid" onclick="toggleFinFilter('Paid')">Paid</button>
+    <button class="fchip ff-reactivation" onclick="toggleFinFilter('Reactivation')">Reactivation</button>
+    <button class="fchip ff-referrals" onclick="toggleFinFilter('Referrals')">Referrals</button>
+  </div>
+</div>
+
+<!-- GANTT -->
+<div class="gantt-outer">
+  <div class="gantt-nav">
+    <button class="nav-btn" onclick="shiftView(-1)">&#9664; Prev</button>
+    <button class="nav-btn nav-today" onclick="jumpToday()">Today</button>
+    <button class="nav-btn" onclick="shiftView(1)">Next &#9654;</button>
+    <span class="gantt-period" id="gantt-period"></span>
+    <button class="nav-btn" id="collapse-all-btn" onclick="toggleCollapseAll()" style="margin-left:auto">Collapse All</button>
+    <span style="font-family:var(--mono);font-size:10px;color:var(--ink-soft)" id="gantt-hint"></span>
+  </div>
+  <div class="gantt-body" id="gantt-body"></div>
+</div>
+
+</div><!-- .app -->
+
+<!-- CONFETTI -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- TOOLTIP -->
+<div class="bar-tooltip" id="bar-tooltip">
+  <div class="tt-name" id="tt-name"></div>
+  <div class="tt-row"><span class="tt-key">Dates</span><span id="tt-dates"></span></div>
+  <div class="tt-row"><span class="tt-key">Owner</span><span id="tt-owner"></span></div>
+  <div class="tt-row"><span class="tt-key">Financial</span><span id="tt-fin"></span></div>
+</div>
+
+<!-- AIRTABLE TOKEN PROMPT -->
+<div id="at-token-overlay" style="display:none;position:fixed;inset:0;background:rgba(4,80,46,.96);z-index:3000;align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:16px;padding:32px;max-width:460px;width:calc(100%-32px);box-shadow:0 24px 60px rgba(0,0,0,.3)">
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px">UK Marketing Calendar</div>
+    <h2 style="font-variation-settings:'wdth' 118;font-weight:850;font-size:22px;color:var(--ink);margin-bottom:8px">Connect to Airtable</h2>
+    <p style="font-size:13px;color:var(--ink-soft);line-height:1.6;margin-bottom:20px">This calendar stores all data in Airtable so your whole team sees the same live information. Enter your Airtable Personal Access Token to connect.</p>
+    <div style="margin-bottom:8px">
+      <label style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px">Personal Access Token</label>
+      <input type="password" id="at-token-input" placeholder="pat···" style="width:100%;background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;font-family:var(--mono)" onkeydown="if(event.key==='Enter')submitToken()">
+    </div>
+    <p style="font-size:12px;color:var(--ink-soft);margin-bottom:18px">
+      Create one at <a href="https://airtable.com/create/tokens" target="_blank" style="color:var(--green)">airtable.com/create/tokens</a> with scopes: <code style="background:var(--paper);padding:1px 5px;border-radius:3px">data.records:read</code> <code style="background:var(--paper);padding:1px 5px;border-radius:3px">data.records:write</code>
+    </p>
+    <button onclick="submitToken()" style="background:var(--green-deep);color:#fff;border:none;border-radius:9px;padding:11px 24px;font-size:14px;font-weight:800;width:100%;cursor:pointer">Connect →</button>
+  </div>
+</div>
+
+<!-- LOADING STATE -->
+<div id="at-loading" style="display:none;position:fixed;inset:0;background:rgba(4,80,46,.7);z-index:2500;align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:12px;padding:24px 32px;font-family:var(--mono);font-size:13px;color:var(--ink);display:flex;align-items:center;gap:12px">
+    <div style="width:18px;height:18px;border:2px solid var(--lime);border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite"></div>
+    Loading calendar data…
+  </div>
+</div>
+
+<!-- ERROR BANNER -->
+<div id="at-error" style="display:none;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#CE4438;color:#fff;border-radius:8px;padding:10px 18px;font-size:13px;font-family:var(--mono);z-index:3000;max-width:500px;text-align:center"></div>
+
+<style>
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+
+<!-- CAMPAIGN BUILDER WIZARD -->
+<div class="wiz-overlay" id="wiz-overlay">
+  <div class="wiz-header">
+    <h2>🧙 Campaign Builder Wizard</h2>
+    <button class="wiz-close" onclick="closeWizard()">×</button>
+  </div>
+  <div class="wiz-steps">
+    <div class="wiz-step-tab active" id="wiz-tab-1" onclick="wizGoToStep(1)"><span class="wiz-step-num">1</span>Campaign Details</div>
+    <div class="wiz-step-tab" id="wiz-tab-2" onclick="wizGoToStep(2)"><span class="wiz-step-num">2</span>Select Channels</div>
+    <div class="wiz-step-tab" id="wiz-tab-3" onclick="wizGoToStep(3)"><span class="wiz-step-num">3</span>Fine-tune Dates</div>
+    <div class="wiz-step-tab" id="wiz-tab-4" onclick="wizGoToStep(4)"><span class="wiz-step-num">4</span>Review & Confirm</div>
+  </div>
+  <div class="wiz-body">
+
+    <!-- STEP 1: Campaign Details -->
+    <div class="wiz-panel active" id="wiz-panel-1">
+      <div class="wiz-row c3">
+        <div class="wiz-fg">
+          <label class="wiz-label">Campaign Tag *</label>
+          <select class="wiz-input" id="wiz-tag">
+            <option value="">Select tag…</option>
+          </select>
+          <input type="text" id="wiz-tag-new" placeholder="Or type new tag + Enter"
+            style="margin-top:5px;background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:6px 10px;font-size:12px;width:100%"
+            onkeydown="wizAddNewTag(event)">
+        </div>
+        <div class="wiz-fg">
+          <label class="wiz-label">Default Start Date *</label>
+          <div class="date-wrap"><input type="date" class="wiz-input" id="wiz-start"><span class="date-icon">📅</span></div>
+        </div>
+        <div class="wiz-fg">
+          <label class="wiz-label">Default End Date *</label>
+          <div class="date-wrap"><input type="date" class="wiz-input" id="wiz-end"><span class="date-icon">📅</span></div>
+        </div>
+      </div>
+      <div class="wiz-row">
+        <div class="wiz-fg">
+          <label class="wiz-label">Default Owner</label>
+          <select class="wiz-input" id="wiz-owner"><option value="">Select owner…</option></select>
+          <input type="text" id="wiz-owner-new" placeholder="Or type new owner + Enter"
+            style="margin-top:5px;background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:6px 10px;font-size:12px;width:100%"
+            onkeydown="wizAddNewOwner(event)">
+        </div>
+        <div class="wiz-fg">
+          <label class="wiz-label">Financial Category</label>
+          <div class="fin-multi" id="wiz-fin-multi" style="margin-top:2px">
+            <button type="button" class="fin-opt" data-val="Paid" onclick="toggleWizFin(this)">Paid</button>
+            <button type="button" class="fin-opt" data-val="Reactivation" onclick="toggleWizFin(this)">Reactivation</button>
+            <button type="button" class="fin-opt" data-val="Referrals" onclick="toggleWizFin(this)">Referrals</button>
+          </div>
+        </div>
+      </div>
+      <div class="wiz-fg">
+        <label class="wiz-label">Campaign Notes</label>
+        <textarea class="wiz-input" id="wiz-notes" rows="2" placeholder="Any campaign-level notes that apply to all activities…"></textarea>
+      </div>
+      <p id="wiz-step1-err" style="font-family:var(--mono);font-size:11px;color:#F5A79E;display:none">⚠ Please fill in Tag, Start Date and End Date</p>
+    </div>
+
+    <!-- STEP 2: Select Channels -->
+    <div class="wiz-panel" id="wiz-panel-2">
+      <div class="ch-count" id="wiz-ch-count">0 channels selected</div>
+      <div id="wiz-ch-grid"></div>
+      <div style="margin-top:16px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:10px 14px">
+        <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9FBBA0;white-space:nowrap">Custom channel</span>
+        <input type="text" id="wiz-custom-ch" placeholder="Type any channel name + Enter to add it"
+          style="flex:1;background:#0F1A13;color:#EAF2E6;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:7px 10px;font-size:12.5px"
+          onkeydown="wizAddCustomChannel(event)">
+      </div>
+    </div>
+
+    <!-- STEP 3: Fine-tune -->
+    <div class="wiz-panel" id="wiz-panel-3">
+      <p style="color:rgba(255,255,255,.55);font-size:13px;margin-bottom:16px">All activities inherit the campaign dates by default. Adjust individual rows as needed, or click <strong style="color:#EAF2E6">+</strong> to add a second activity for the same channel.</p>
+      <table class="tune-table">
+        <thead>
+          <tr>
+            <th>Activity Name</th>
+            <th>Category</th>
+            <th>Channel</th>
+            <th>Start</th>
+            <th>End</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="wiz-tune-body"></tbody>
+      </table>
+    </div>
+
+    <!-- STEP 4: Review -->
+    <div class="wiz-panel" id="wiz-panel-4">
+      <div class="wiz-summary" id="wiz-summary"></div>
+      <div class="review-list" id="wiz-review-list"></div>
+    </div>
+
+  </div>
+  <div class="wiz-footer">
+    <span class="wiz-hint" id="wiz-footer-hint"></span>
+    <div class="wiz-footer-btns">
+      <button class="btn-wiz-back" id="wiz-back-btn" onclick="wizBack()" style="display:none">← Back</button>
+      <button class="btn-wiz-next" id="wiz-next-btn" onclick="wizNext()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div class="settings-overlay" id="settings-overlay" onclick="closeSettings()"></div>
+<div class="settings-panel" id="settings-panel">
+  <div class="sp-header">
+    <h2>⚙ Settings</h2>
+    <button class="sp-close" onclick="closeSettings()">×</button>
+  </div>
+  <div class="sp-body">
+    <div class="sp-section">
+      <h3>Campaign Tags</h3>
+      <div class="sp-list" id="sp-tags-list"></div>
+      <div class="sp-add-row">
+        <input type="text" id="sp-tag-input" placeholder="e.g. Peak 2026, Valentine's…" onkeydown="if(event.key==='Enter')addSettingItem('tags')">
+        <button class="btn-sp-add" onclick="addSettingItem('tags')">Add</button>
+      </div>
+      <p class="sp-hint">Tags appear as a restricted dropdown when adding activities.</p>
+    </div>
+    <div class="sp-section">
+      <h3>Owners</h3>
+      <div class="sp-list" id="sp-owners-list"></div>
+      <div class="sp-add-row">
+        <input type="text" id="sp-owner-input" placeholder="e.g. Eleanor Walker" onkeydown="if(event.key==='Enter')addSettingItem('owners')">
+        <button class="btn-sp-add" onclick="addSettingItem('owners')">Add</button>
+      </div>
+      <p class="sp-hint">Names populate the Owner dropdown when adding activities.</p>
+    </div>
+    <div class="sp-section">
+      <h3>Custom Channels</h3>
+      <div class="sp-add-row" style="margin-bottom:8px">
+        <select id="sp-ch-group">
+          <option value="brand">📺 Brand</option>
+          <option value="growth">📈 Growth</option>
+          <option value="partner">🤝 Partnerships / Affiliates</option>
+          <option value="discount">🏷 Discounts</option>
+          <option value="pricing">💰 Pricing</option>
+        </select>
+        <input type="text" id="sp-ch-input" placeholder="Channel name" onkeydown="if(event.key==='Enter')addSettingItem('channels')">
+        <button class="btn-sp-add" onclick="addSettingItem('channels')">Add</button>
+      </div>
+      <div class="sp-list" id="sp-channels-list"></div>
+      <p class="sp-hint">Custom channels appear alongside built-in channels in the form.</p>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT / VIEW MODAL -->
+<div class="overlay" id="overlay" onclick="closeOverlay(event)">
+  <div class="popup" id="popup">
+    <button class="pop-close" onclick="closePopup()">×</button>
+    <div id="pop-badge" class="pop-badge"></div>
+
+    <!-- Editable fields -->
+    <div style="display:flex;flex-direction:column;gap:10px">
+
+      <div class="ef-row">
+        <div class="ef-label">Activity Name</div>
+        <input class="ef-input" id="ef-name" type="text">
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="ef-row">
+          <div class="ef-label">Category</div>
+          <select class="ef-input" id="ef-group" onchange="editGroupChange()">
+            <option value="brand">📺 Brand</option>
+            <option value="growth">📈 Growth</option>
+            <option value="partner">🤝 Partnerships / Affiliates</option>
+            <option value="discount">🏷 Discounts</option>
+            <option value="pricing">💰 Pricing</option>
+          </select>
+        </div>
+        <div class="ef-row">
+          <div class="ef-label">Channel</div>
+          <select class="ef-input" id="ef-channel"></select>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="ef-row">
+          <div class="ef-label">Start Date</div>
+          <div class="date-wrap"><input class="ef-input" id="ef-start" type="date"><span class="date-icon">📅</span></div>
+        </div>
+        <div class="ef-row">
+          <div class="ef-label">End Date</div>
+          <div class="date-wrap"><input class="ef-input" id="ef-end" type="date"><span class="date-icon">📅</span></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="ef-row">
+          <div class="ef-label">Owner</div>
+          <select class="ef-input" id="ef-owner"></select>
+          <input type="text" id="ef-owner-new" placeholder="Type new owner + Enter to add"
+            style="margin-top:4px;width:100%;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:7px;padding:6px 9px;font-size:12px"
+            onkeydown="addNewOwnerInline(event,'ef-owner','ef-owner-new')">
+        </div>
+        <div class="ef-row">
+          <div class="ef-label">Campaign Tags</div>
+          <select class="ef-input" id="ef-tag-select" onchange="addEditTag()">
+            <option value="">Add a tag…</option>
+          </select>
+          <div class="tag-chips" id="ef-tag-chips" style="margin-top:5px"></div>
+        </div>
+      </div>
+
+      <div class="ef-row">
+        <div class="ef-label">Financial Category</div>
+        <div class="fin-multi" id="ef-fin-multi" style="margin-top:2px">
+          <button type="button" class="fin-opt" data-val="Paid" onclick="toggleEditFin(this)">Paid</button>
+          <button type="button" class="fin-opt" data-val="Reactivation" onclick="toggleEditFin(this)">Reactivation</button>
+          <button type="button" class="fin-opt" data-val="Referrals" onclick="toggleEditFin(this)">Referrals</button>
+        </div>
+      </div>
+
+      <div class="ef-row">
+        <div class="ef-label">Notes</div>
+        <textarea class="ef-input" id="ef-notes" rows="2"></textarea>
+      </div>
+
+      <!-- Conditional: Discount -->
+      <div class="ef-cond" id="ef-panel-discount" style="display:none">
+        <div class="ef-label" style="color:var(--discount-text);margin-bottom:4px">🏷 Discount Detail</div>
+        <textarea class="ef-input" id="ef-discount-notes" rows="2" placeholder="Discount structure / mechanic…"></textarea>
+      </div>
+
+      <!-- Conditional: Pricing -->
+      <div class="ef-cond" id="ef-panel-pricing" style="display:none">
+        <div class="ef-label" style="color:var(--pricing-text);margin-bottom:4px">💰 Pricing Structure</div>
+        <textarea class="ef-input" id="ef-pricing-notes" rows="2" placeholder="Pricing description…"></textarea>
+        <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink);margin-top:8px;cursor:pointer;font-weight:600">
+          <input type="checkbox" id="ef-is-price-change" style="width:14px;height:14px;accent-color:var(--green)">
+          Includes a pricing change
+        </label>
+        <div id="ef-price-change-fields" style="display:none;margin-top:8px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div class="ef-row"><div class="ef-label">Change Date</div><div class="date-wrap"><input class="ef-input" id="ef-price-change-date" type="date"><span class="date-icon">📅</span></div></div>
+            <div class="ef-row"><div class="ef-label">Description</div><input class="ef-input" id="ef-price-change-desc" type="text" placeholder="e.g. £4.49 → £4.99/serving"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pop-actions" style="margin-top:16px">
+      <button class="btn-del" id="pop-del">Delete</button>
+      <button class="btn-close-p" onclick="saveEdit()">Save Changes</button>
+      <button style="background:var(--lime-soft);border:1.5px solid rgba(169,207,56,.5);border-radius:7px;padding:7px 13px;font-size:12.5px;font-weight:700;color:var(--green-deep)" onclick="duplicateActivity()">Duplicate</button>
+      <button style="background:transparent;border:1px solid var(--line);border-radius:7px;padding:7px 13px;font-size:12.5px;font-weight:700;color:var(--ink-soft)" onclick="closePopup()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+// CONSTANTS
+// ══════════════════════════════════════════════
+const STORE_EV  = 'hf_cal_v4_events';
+const STORE_CFG = 'hf_cal_v4_config';
+const MSHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+const GROUPS = {
+  brand:   {label:'📺 Brand',                     col:'#3D6FA8',bg:'#E4EDF7',text:'#2A4F7A'},
+  growth:  {label:'📈 Growth',                    col:'#067A46',bg:'#E0F2EA',text:'#04502E'},
+  partner: {label:'🤝 Partnerships / Affiliates', col:'#7B5EA7',bg:'#EDE8F5',text:'#5A3F88'},
+  discount:{label:'🏷 Discounts',                 col:'#DF9A2E',bg:'#FBF0DA',text:'#8A5308'},
+  pricing: {label:'💰 Pricing',                   col:'#CE4438',bg:'#FBE6E3',text:'#922E25'},
+};
+const GROUP_KEYS = Object.keys(GROUPS);
+
+const BASE_CHANNELS = {
+  brand:   ['TV / Video','Radio','OOH','PR','Organic Social','Influencer'],
+  growth:  ['Paid Social','Display / Programmatic','Paid Search','App Paid','SEO','CRM Actives','CRM Reactivation','Email','Push / In-App','Direct Mail','SMS','Influencer'],
+  partner: ['Affiliates','Partnerships'],
+  discount:['Pricing & Discounts'],
+  pricing: ['Pricing & Discounts'],
+};
+
+// ══════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════
+let events = [];
+// Permanent base tags — always present, cannot be accidentally lost
+const PERMANENT_TAGS = ['Peak'];
+let config  = {tags:[], owners:[], customChannels:[]};
+let mode    = 'campaign';
+let zoom    = 'week';
+let viewStart = new Date(new Date().getFullYear(), 0, 1); // used for month/quarter/day
+// For week zoom, viewStart is recalculated from today in getCols — so this is fine
+let weekShift = 0; // number of weeks shifted from today's default window
+let catFilters = new Set(['all']);
+let finFilters = new Set(['all']);
+// All sections start COLLAPSED — key → false means expanded, true means collapsed
+let collapsed  = {};
+let formTags   = [];
+let formFins   = new Set();
+
+// ══════════════════════════════════════════════
+// AIRTABLE CONFIG
+// ══════════════════════════════════════════════
+const AT_BASE   = 'appyNsKlg3a32JK3Y';
+const AT_ACTS   = 'tbllG0gTdmk2rftnj';
+const AT_CFG    = 'tblHysQpjYxpAo4lC';
+const AT_FIELDS = {
+  name:'fldz7pcBNQWg0PHc8', group:'fldLHtNXLZmUyiSnM', channel:'fldtLCYKMbHDnH60B',
+  start:'fldUk48nFFdBOXf2M', end:'fldTx3BgUoAiqBz8T', tags:'fldT7nmABH51EwEq2',
+  fins:'fld61kQw6KQ80aJD2', owner:'fldK1kN64P1ePCDYp', notes:'fldugbJ7mxUgv38IR',
+  discountNotes:'fld12ns2gFkHEFZLB', pricingNotes:'fldhdAHD91UvqkJE4',
+  isPriceChange:'fldzapBWYwKekoZnp', priceChangeDate:'fldMNiobDMh8jBh9w',
+  priceChangeDesc:'flde1eNBtEubm87FT', calId:'fldYTAFItrJiWc8Im'
+};
+const AT_CFG_FIELDS = { key:'fldSBvaWQq5s8fh0c', value:'fldQ71FraVCv6Jie8' };
+
+// Map field IDs → event properties for reading back from Airtable
+function atRecordToEvent(rec){
+  const f=rec.fields;
+  return {
+    id: f['Cal ID']||rec.id,
+    _recId: rec.id,
+    name: f['Name']||'',
+    group: f['Group']||'brand',
+    channel: f['Channel']||'',
+    start: f['Start']||'',
+    end: f['End']||'',
+    tags: f['Tags']||[],
+    fins: f['Financial Category']||[],
+    owner: f['Owner']||'',
+    notes: f['Notes']||'',
+    discountNotes: f['Discount Notes']||'',
+    pricingNotes: f['Pricing Notes']||'',
+    isPriceChange: !!f['Is Price Change'],
+    priceChangeDate: f['Price Change Date']||'',
+    priceChangeDesc: f['Price Change Desc']||'',
+  };
+}
+
+function eventToAtFields(ev){
+  return {
+    'Name': ev.name,
+    'Group': ev.group,
+    'Channel': ev.channel||'',
+    'Start': ev.start||null,
+    'End': ev.end||null,
+    'Tags': ev.tags||[],
+    'Financial Category': ev.fins||[],
+    'Owner': ev.owner||'',
+    'Notes': ev.notes||'',
+    'Discount Notes': ev.discountNotes||'',
+    'Pricing Notes': ev.pricingNotes||'',
+    'Is Price Change': !!ev.isPriceChange,
+    'Price Change Date': ev.priceChangeDate||null,
+    'Price Change Desc': ev.priceChangeDesc||'',
+    'Cal ID': ev.id,
+  };
+}
+
+// ── Airtable API helper ───────────────────────
+async function atFetch(method, path, body){
+  const res = await fetch(`https://api.airtable.com/v0/${AT_BASE}/${path}`,{
+    method,
+    headers:{'Content-Type':'application/json','Authorization':`Bearer ${AT_TOKEN}`},
+    body: body ? JSON.stringify(body) : undefined
+  });
+  if(!res.ok){ const e=await res.text(); throw new Error(`Airtable ${method} ${path}: ${e}`); }
+  return res.json();
+}
+
+// ── Load all records (handles pagination) ─────
+async function atListAll(tableId){
+  let records=[], offset=null;
+  do {
+    const url=offset?`${tableId}?offset=${offset}`:`${tableId}`;
+    const data=await atFetch('GET',url);
+    records=[...records,...(data.records||[])];
+    offset=data.offset||null;
+  } while(offset);
+  return records;
+}
+
+// ── Persistence ───────────────────────────────
+let AT_TOKEN = ''; // set by user prompt on first load
+let atReady  = false;
+
+async function loadFromAirtable(){
+  try {
+    showLoadingState(true);
+    // Load activities
+    const actRecs = await atListAll(AT_ACTS);
+    events = actRecs.map(atRecordToEvent).filter(e=>e.name);
+    // Load config
+    const cfgRecs = await atListAll(AT_CFG);
+    config = {tags:[], owners:[], customChannels:[]};
+    cfgRecs.forEach(rec=>{
+      const k=rec.fields['Key'], v=rec.fields['Value'];
+      if(!k||!v) return;
+      if(k==='tag')    config.tags.push(v);
+      if(k==='owner')  config.owners.push(v);
+      if(k==='channel'){ try{ config.customChannels.push(JSON.parse(v)); }catch(e){} }
+    });
+    atReady=true;
+    showLoadingState(false);
+    refreshFormDropdowns();
+    render();
+    // Start polling for changes every 30s
+    setInterval(pollAirtable, 30000);
+  } catch(e) {
+    showLoadingState(false);
+    showAtError('Could not connect to Airtable: '+e.message);
+  }
+}
+
+async function pollAirtable(){
+  try {
+    const actRecs = await atListAll(AT_ACTS);
+    const fresh = actRecs.map(atRecordToEvent).filter(e=>e.name);
+    // Only re-render if data has changed
+    if(JSON.stringify(fresh)!==JSON.stringify(events)){
+      events=fresh; render();
+    }
+  } catch(e){ console.warn('Airtable poll failed:',e); }
+}
+
+async function saveEv_at(ev, recId){
+  const fields=eventToAtFields(ev);
+  if(recId){
+    await atFetch('PATCH',`${AT_ACTS}/${recId}`,{fields});
+  } else {
+    const res=await atFetch('POST',AT_ACTS,{records:[{fields}]});
+    // Store recId back on event
+    const created=res.records?.[0];
+    if(created) ev._recId=created.id;
+  }
+}
+
+async function deleteEv_at(recId){
+  if(!recId) return;
+  await atFetch('DELETE',`${AT_ACTS}/${recId}`);
+}
+
+// Settings: each tag/owner/channel is a separate record with key+value
+let configRecIds = {}; // key:value -> recId
+
+async function saveConfigItem(key, value, existingRecId){
+  const fields={'Key':key,'Value':value};
+  if(existingRecId){
+    await atFetch('PATCH',`${AT_CFG}/${existingRecId}`,{fields});
+    return existingRecId;
+  } else {
+    const res=await atFetch('POST',AT_CFG,{records:[{fields}]});
+    return res.records?.[0]?.id;
+  }
+}
+
+async function deleteConfigItem(recId){
+  await atFetch('DELETE',`${AT_CFG}/${recId}`);
+}
+
+// saveEv and saveCfg are now no-ops — Airtable writes happen per-action above
+function saveEv(){}
+function saveCfg(){}
+
+// ── Token prompt ──────────────────────────────
+function showTokenPrompt(){
+  document.getElementById('at-token-overlay').style.display='flex';
+}
+function submitToken(){
+  const t=document.getElementById('at-token-input').value.trim();
+  if(!t){ alert('Please enter your Airtable Personal Access Token'); return; }
+  AT_TOKEN=t;
+  try{ localStorage.setItem('hf_cal_at_token',t); }catch(e){}
+  document.getElementById('at-token-overlay').style.display='none';
+  loadFromAirtable();
+}
+
+function showLoadingState(on){
+  document.getElementById('at-loading').style.display=on?'flex':'none';
+}
+function showAtError(msg){
+  const el=document.getElementById('at-error');
+  el.textContent=msg; el.style.display='block';
+  setTimeout(()=>{ el.style.display='none'; }, 5000);
+}
+
+function allTags(){
+  const user = config.tags.filter(t=>!PERMANENT_TAGS.includes(t));
+  return [...PERMANENT_TAGS, ...user];
+}
+
+function load(){
+  // Try to get saved token
+  try{ const t=localStorage.getItem('hf_cal_at_token'); if(t) AT_TOKEN=t; }catch(e){}
+  if(AT_TOKEN){ loadFromAirtable(); }
+  else { showTokenPrompt(); }
+}
+
+function seed(){ events=[]; }
+
+function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+
+// ══════════════════════════════════════════════
+// DATE UTILS
+// ══════════════════════════════════════════════
+function ds(d){ return d.toISOString().split('T')[0]; }
+function pd(s){ const[y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
+function addD(d,n){ const r=new Date(d); r.setDate(r.getDate()+n); return r; }
+function sameDay(a,b){ return ds(a)===ds(b); }
+function fmtFull(s){ if(!s) return '—'; try{return pd(s).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}catch(e){return s;} }
+function startOfWeek(d){ const dt=new Date(d),day=dt.getDay(); dt.setDate(dt.getDate()-(day===0?6:day-1)); dt.setHours(0,0,0,0); return dt; }
+function startOfYear(d){ return new Date(d.getFullYear(),0,1); }
+function startOfQuarter(d){ return new Date(d.getFullYear(),Math.floor(d.getMonth()/3)*3,1); }
+
+// ══════════════════════════════════════════════
+// CHANNEL HELPER
+// ══════════════════════════════════════════════
+function channelsFor(grp){
+  const base = BASE_CHANNELS[grp]||[];
+  const custom = config.customChannels.filter(c=>c.group===grp).map(c=>c.name);
+  return [...base,...custom];
+}
+
+// ══════════════════════════════════════════════
+// COLUMNS
+// ══════════════════════════════════════════════
+function getCols(){
+  const today=new Date(); today.setHours(0,0,0,0);
+  const y=viewStart.getFullYear();
+  let cols=[];
+
+  if(zoom==='day'){
+    // Default: 30 days before today. Prev/Next shifts viewStart by 30 days.
+    // On first load or Today press, viewStart = today so window is today±30
+    const anchor=viewStart.getFullYear()===today.getFullYear()&&viewStart.getMonth()===today.getMonth()&&viewStart.getDate()===today.getDate()
+      ? addD(today,-30)
+      : addD(viewStart,-30);
+    for(let i=0;i<61;i++){
+      const d=addD(anchor,i); d.setHours(0,0,0,0);
+      const e=new Date(d); e.setHours(23,59,59,999);
+      cols.push({label:d.getDate()+'',sublabel:MSHORT[d.getMonth()],date:d,isToday:sameDay(d,today),end:e});
+    }
+  } else if(zoom==='week'){
+    // weekShift = number of 13-week blocks navigated via Prev/Next (0 = today's window)
+    const qs=startOfQuarter(today);
+    const backQ=new Date(qs); backQ.setMonth(backQ.getMonth()-3);
+    let w=startOfWeek(backQ);
+    if(weekShift!==0) w=addD(w,weekShift*7);
+    for(let i=0;i<39;i++){
+      const we=addD(w,6); we.setHours(23,59,59,999);
+      const ws=new Date(w); ws.setHours(0,0,0,0);
+      const isT=today>=ws&&today<=we;
+      const wn=getISOWeek(ws);
+      const yr=ws.getFullYear();
+      const showYear=wn===1||i===0;
+      cols.push({label:`W${wn}${showYear?' '+yr:''}`,date:ws,isToday:isT,end:we});
+      w=addD(w,7);
+    }
+  } else if(zoom==='month'){
+    for(let m=0;m<12;m++){
+      const d=new Date(y,m,1,0,0,0,0);
+      const e=new Date(y,m+1,0,23,59,59,999); // last ms of last day of month
+      const isToday=today.getFullYear()===y&&today.getMonth()===m;
+      cols.push({label:MSHORT[m],date:d,isToday,end:e});
+    }
+  } else { // quarter
+    for(let q=0;q<4;q++){
+      const d=new Date(y,q*3,1,0,0,0,0);
+      const e=new Date(y,q*3+3,0,23,59,59,999); // last ms of last day of quarter
+      const isToday=today.getFullYear()===y&&Math.floor(today.getMonth()/3)===q;
+      cols.push({label:`Q${q+1}`,date:d,isToday,end:e});
+    }
+  }
+  return cols;
+}
+
+function evOverlapsCol(ev,col){
+  return pd(ev.start)<=col.end && pd(ev.end)>=col.date;
+}
+
+function colWidth(){
+  if(zoom==='day')     return 36;
+  if(zoom==='week')    return 66;
+  if(zoom==='month')   return 94;
+  return 180; // quarter
+}
+
+// ══════════════════════════════════════════════
+// RENDER
+// ══════════════════════════════════════════════
+let scrollOnNextRender = true; // scroll to today on first load and explicit nav
+
+function getISOWeek(d){
+  const date=new Date(d); date.setHours(0,0,0,0);
+  date.setDate(date.getDate()+3-(date.getDay()+6)%7);
+  const w1=new Date(date.getFullYear(),0,4);
+  return 1+Math.round(((date-w1)/86400000-3+(w1.getDay()+6)%7)/7);
+}
+
+function scrollToToday(cols, cw){
+  if(!scrollOnNextRender) return;
+  scrollOnNextRender = false;
+  const body = document.getElementById('gantt-body');
+  const ti = cols.findIndex(c => c.isToday);
+  if(ti < 0) return;
+  const LW = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--label-w'))||240;
+  const todayLeft = LW + ti * cw;
+  requestAnimationFrame(()=>{
+    body.scrollLeft = Math.max(0, todayLeft - body.clientWidth / 2 + cw / 2);
+  });
+}
+// ══════════════════════════════════════════════
+function render(){
+  const body=document.getElementById('gantt-body');
+  const cols=getCols();
+  const cw=colWidth();
+  const evs=visibleEvents();
+  const today=new Date(); today.setHours(0,0,0,0);
+
+  // Period label
+  const fc=cols[0], lc=cols[cols.length-1];
+  document.getElementById('gantt-period').textContent =
+    zoom==='quarter' ? `${MONTHS[0]} — ${MONTHS[11]} ${fc.date.getFullYear()}` :
+    zoom==='month'   ? `${fc.date.getFullYear()} — full year` :
+    `${fc.date.getDate()} ${MSHORT[fc.date.getMonth()]} — ${lc.end.getDate()} ${MSHORT[lc.end.getMonth()]} ${lc.end.getFullYear()}`;
+  document.getElementById('gantt-hint').textContent = `${evs.length} activit${evs.length===1?'y':'ies'}`;
+
+  // Build table — use a fixed LW for HTML generation based on CSS variable
+  // We'll re-read after injection for positioning
+  const LW_CSS = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--label-w'))||240;
+
+  let html = `<table class="gt"><thead><tr>`;
+  html += `<th class="gt-corner" style="width:${LW_CSS}px;min-width:${LW_CSS}px"></th>`;
+  cols.forEach(c=>{
+    html += `<th class="gt-col-head${c.isToday?' today-head':''}" style="width:${cw}px;min-width:${cw}px">${c.label}</th>`;
+  });
+  html += `</tr></thead><tbody>`;
+  html += mode==='group' ? renderGroupMode(evs,cols,cw,LW_CSS) : renderCampaignMode(evs,cols,cw,LW_CSS);
+  html += `</tbody></table>`;
+  body.innerHTML = html;
+
+  // Scroll today into centre of viewport
+  scrollToToday(cols, cw);
+
+  // Delegated events — handler is set up once at init, not per render
+}
+
+function initClickHandler(){
+  const body=document.getElementById('gantt-body');
+  body.addEventListener('click', e=>{
+    const bar=e.target.closest('[data-evid]'); if(bar){ showPopup(bar.dataset.evid); return; }
+    const sec=e.target.closest('[data-sec]');  if(sec){ collapsed[sec.dataset.sec]=!collapsed[sec.dataset.sec]; render(); }
+  });
+}
+
+// ── PRICE CHANGE BANNERS ──────────────────────
+// Renders a slim red banner row for each pricing event that has isPriceChange=true.
+// These appear as a dedicated section between Pricing rows and the next group.
+function priceChangeBannerRows(allEvs, cols, cw, LW){
+  // Respect category filter — only show price changes from visible pricing events
+  const priceChanges = allEvs.filter(ev=>ev.isPriceChange && ev.priceChangeDate && ev.group==='pricing');
+  if(!priceChanges.length) return '';
+
+  let html = `<tr class="pc-banner-row">
+    <td class="pc-banner-td" style="border-bottom:1px solid rgba(206,68,56,.2)">
+      <span style="font-family:var(--mono);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pricing-text)">💰 Price Changes</span>
+    </td>
+    ${cols.map(()=>`<td class="pc-banner-cell"></td>`).join('')}
+  </tr>`;
+
+  priceChanges.forEach(ev=>{
+    const changeDate = pd(ev.priceChangeDate);
+    const label = ev.priceChangeDesc || `Price change · ${fmtFull(ev.priceChangeDate)}`;
+    const cells = cols.map((col,ci)=>{
+      // Flag appears only in the column containing the change date
+      const inCol = changeDate >= col.date && changeDate <= col.end;
+      // Banner tint spans entire pricing period
+      const inPeriod = evOverlapsCol(ev, col);
+      const isS = inPeriod && (ci===0||!evOverlapsCol(ev,cols[ci-1]));
+      const isE = inPeriod && (ci===cols.length-1||!evOverlapsCol(ev,cols[ci+1]));
+
+      let flagHtml = '';
+      if(inCol){
+        // Vertical tick line — full height of cell
+        flagHtml = `<div class="pc-flag" data-evid="${ev.id}"
+          style="left:${isS?'2px':'0'};right:${isE?'2px':'0'};border-radius:3px"
+          title="${label}">
+          <span style="font-size:11px">💰</span>
+          <span style="overflow:hidden;text-overflow:ellipsis">${label}</span>
+        </div>`;
+      } else if(inPeriod){
+        // Subtle tint across period — no flag text
+        flagHtml = `<div style="position:absolute;top:3px;bottom:3px;
+          left:${isS?'2px':'0'};right:${isE?'2px':'0'};
+          background:rgba(206,68,56,.18);border-radius:${isS?'3px 0 0 3px':''}${isE?' 0 3px 3px 0':''}"></div>`;
+      }
+      return `<td class="pc-banner-cell" style="position:relative">${flagHtml}</td>`;
+    }).join('');
+
+    html += `<tr class="pc-banner-row">
+      <td class="pc-banner-td" style="padding-left:24px" title="${label}">
+        <span style="font-size:10px;color:var(--pricing-text);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block">${ev.name}</span>
+      </td>${cells}</tr>`;
+  });
+
+  return html;
+}
+
+// ── GROUP MODE ────────────────────────────────
+function renderGroupMode(evs,cols,cw,LW){
+  let html='';
+  GROUP_KEYS.forEach(grp=>{
+    if(!catFilters.has('all')&&!catFilters.has(grp)) return;
+    const g=GROUPS[grp];
+    const grpEvs=evs.filter(e=>e.group===grp);
+    if(!catFilters.has('all')&&!grpEvs.length) return;
+    // Default open — only collapsed if explicitly set to true
+    const isCol = collapsed['g_'+grp] === true;
+    html += secRow(`g_${grp}`, isCol,
+      `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${g.col};flex-shrink:0"></span>${g.label}`,
+      g.bg, g.text, cols, LW);
+    if(!isCol){
+      const noSub = !channelsFor(grp).length;
+      if(noSub){
+        html += actRows(grpEvs, cols, cw, LW, grp, false, true);
+      } else {
+        const usedCh = [...new Set(grpEvs.map(e=>e.channel||'General'))];
+        if(!usedCh.length){ html+=emptyRow(cols,LW,false); return; }
+        usedCh.forEach(ch=>{
+          const chKey=`ch_${grp}_${ch}`;
+          const chCol = collapsed[chKey] === true; // default open
+          const chEvs = grpEvs.filter(e=>(e.channel||'General')===ch);
+          html += subRow(chKey, chCol, ch, cols, LW);
+          if(!chCol) html += actRows(chEvs, cols, cw, LW, grp, true, true);
+        });
+      }
+    }
+  });
+  if(!html) html = emptyRow(cols,LW,false,'No activity matches current filters');
+  // Price change banners — after all category sections
+  html += priceChangeBannerRows(evs, cols, cw, LW);
+  return html;
+}
+function renderCampaignMode(evs,cols,cw,LW){
+  let html='';
+  const usedTags=[...new Set(evs.flatMap(e=>e.tags||[]))].sort();
+  const untagged=[...evs.filter(e=>!e.tags||!e.tags.length)].sort((a,b)=>a.start.localeCompare(b.start));
+  if(!usedTags.length&&!untagged.length) return emptyRow(cols,LW,false,'No activity yet — add one above');
+
+  usedTags.forEach(tag=>{
+    const tagEvs=[...evs.filter(e=>e.tags&&e.tags.includes(tag))].sort((a,b)=>a.start.localeCompare(b.start));
+    if(!tagEvs.length) return; // skip empty tag sections
+    const isCol=collapsed['tag_'+tag]===true;
+
+    // Hero span bar: earliest start → latest end across all events in tag
+    const heroStart=tagEvs.reduce((a,e)=>e.start<a?e.start:a,tagEvs[0].start);
+    const heroEnd  =tagEvs.reduce((a,e)=>e.end>a?e.end:a,tagEvs[0].end);
+    // Hero bar: build cells with colspan for the span, individual tds outside it
+    let heroCells='';
+    let hci=0;
+    while(hci<cols.length){
+      const col=cols[hci];
+      const over=pd(heroStart)<=col.end&&pd(heroEnd)>=col.date;
+      if(!over){
+        heroCells+=`<td style="background:#EDF4D4;border-bottom:1px solid var(--line);border-right:1px solid var(--line)"></td>`;
+        hci++;
+      } else {
+        let hend=hci;
+        while(hend<cols.length && pd(heroStart)<=cols[hend].end&&pd(heroEnd)>=cols[hend].date) hend++;
+        const span=hend-hci;
+        heroCells+=`<td colspan="${span}" style="background:#EDF4D4;border-bottom:1px solid var(--line);border-right:1px solid var(--line);position:relative;width:${cw*span}px;min-width:${cw*span}px">
+          <div style="position:absolute;top:3px;bottom:3px;left:2px;right:2px;border-radius:5px;background:#04502E;display:flex;align-items:center;padding:0 10px;font-size:10.5px;font-weight:800;color:#A9CF38;white-space:nowrap;overflow:hidden;cursor:pointer;z-index:2;gap:8px" data-sec="tag_${tag}">
+            <span style="overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0">${tag} &nbsp;·&nbsp; ${fmtFull(heroStart)} → ${fmtFull(heroEnd)}</span>
+          </div>
+        </td>`;
+        hci=hend;
+      }
+    }
+
+    // Section header row with hero bar inline
+    html+=`<tr class="gt-sec${isCol?' collapsed':''}" data-sec="tag_${tag}">
+      <td class="sec-td" style="background:#EDF4D4">
+        <div class="sec-label" style="color:#04502E">
+          <span class="caret">▼</span>${tag}
+        </div>
+      </td>${heroCells}</tr>`;
+
+    if(!isCol){
+      // Flat activity rows — no channel sub-headers, channel shown as label on the row
+      html+=actRowsCampaign(tagEvs,cols,cw,LW);
+    }
+  });
+
+  // No Campaign Tag section — always shown, channel grouped
+  const isColUn=collapsed['tag_untagged']===true;
+  html+=secRow('tag_untagged',isColUn,'No Campaign Tag','#F4F6EF','#4A5A4F',cols,LW);
+  if(!isColUn) html+=actRowsUntagged(untagged,cols,cw,LW);
+  // Price change banners at the bottom of campaign view too
+  html += priceChangeBannerRows(evs, cols, cw, LW);
+  return html;
+}
+
+// ── CAMPAIGN ACTIVITY ROWS — flat, channel label on left ──
+function actRowsCampaign(evs, cols, cw, LW){
+  if(!evs.length) return emptyRow(cols,LW,false);
+  // Sort chronologically by start date
+  const sorted=[...evs].sort((a,b)=>a.start.localeCompare(b.start));
+  return sorted.map(ev=>{
+    const g=GROUPS[ev.group]||GROUPS['brand'];
+    const ttDates=`${fmtFull(ev.start)} → ${fmtFull(ev.end)}`;
+    const ttOwner=ev.owner||'—';
+    const ttFin=(ev.fins&&ev.fins.length)?ev.fins.join(', '):'—';
+    const isPast = pd(ev.end) < new Date(new Date().setHours(0,0,0,0));
+    const fadeStyle = isPast ? 'opacity:0.5;' : '';
+
+    let cells='';
+    let ci=0;
+    while(ci<cols.length){
+      const col=cols[ci];
+      const over=evOverlapsCol(ev,col);
+      if(!over){
+        cells+=`<td class="bar-cell${col.isToday?' today-col':''}" style="width:${cw}px"></td>`;
+        ci++;
+      } else {
+        let end=ci;
+        while(end<cols.length && evOverlapsCol(ev,cols[end])) end++;
+        const span=end-ci;
+        const hasToday=cols.slice(ci,end).some(c=>c.isToday);
+        cells+=`<td colspan="${span}" class="bar-cell${hasToday?' today-col':''}" style="width:${cw*span}px;min-width:${cw*span}px;position:relative">
+          <div class="bar ${ev.group}" data-evid="${ev.id}"
+            data-tt-name="${ev.name.replace(/"/g,'&quot;')}"
+            data-tt-dates="${ttDates}"
+            data-tt-owner="${ttOwner}"
+            data-tt-fin="${ttFin}"
+            style="left:2px;right:2px;border-radius:4px;position:absolute;top:4px;bottom:4px;${fadeStyle}"
+          ><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0">${ev.name}</span></div>
+        </td>`;
+        ci=end;
+      }
+    }
+
+    const dot=`<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${g.col};margin-right:5px;flex-shrink:0"></span>`;
+
+    return `<tr class="gt-act">
+      <td class="row-label-td" style="padding-left:20px" title="${ev.name}">
+        ${dot}<span style="overflow:hidden;text-overflow:ellipsis;color:var(--ink-soft);font-size:11px">${ev.name}</span>
+      </td>${cells}</tr>`;
+  }).join('');
+}
+
+// ── UNTAGGED SECTION — channel grouped + chronological ──
+function actRowsUntagged(evs, cols, cw, LW){
+  if(!evs.length) return emptyRow(cols,LW,false,'No untagged activities');
+  // Group by channel, sort channels alphabetically, sort activities within chronologically
+  const channels=[...new Set(evs.map(e=>e.channel||'General'))].sort();
+  let html='';
+  channels.forEach(ch=>{
+    const chEvs=[...evs.filter(e=>(e.channel||'General')===ch)].sort((a,b)=>a.start.localeCompare(b.start));
+    const key=`untagged_ch_${ch}`;
+    const isCol=collapsed[key]===true; // default open
+    html+=subRow(key,isCol,ch,cols,LW);
+    if(!isCol) html+=actRowsCampaign(chEvs,cols,cw,LW);
+  });
+  return html;
+}
+
+// ── ROW BUILDERS ──────────────────────────────
+function secRow(key, isCol, labelHtml, bg, textCol, cols, LW){
+  const blank=cols.map(()=>`<td style="background:${bg};border-bottom:1px solid var(--line);border-right:1px solid var(--line)"></td>`).join('');
+  return `<tr class="gt-sec${isCol?' collapsed':''}" data-sec="${key}">
+    <td class="sec-td" style="background:${bg}">
+      <div class="sec-label" style="color:${textCol}"><span class="caret">▼</span>${labelHtml}</div>
+    </td>${blank}</tr>`;
+}
+
+function subRow(key, isCol, label, cols, LW){
+  const blank=cols.map(()=>`<td style="background:#F7FAF5;border-bottom:1px solid var(--line);border-right:1px solid var(--line)"></td>`).join('');
+  return `<tr class="gt-sub${isCol?' collapsed':''}" data-sec="${key}">
+    <td class="sub-td">
+      <div class="sub-label"><span class="caret" style="font-size:7px">▼</span>${label}</div>
+    </td>${blank}</tr>`;
+}
+
+function emptyRow(cols,LW,indent,msg='No activity yet'){
+  return `<tr class="gt-act">
+    <td class="row-label-td" style="padding-left:${indent?42:28}px;font-style:italic;color:#AAB8A8;font-size:11px">${msg}</td>
+    ${cols.map(()=>`<td style="border-bottom:1px solid var(--line);border-right:1px solid var(--line)"></td>`).join('')}
+  </tr>`;
+}
+
+function actRows(evs, cols, cw, LW, grp, indent, showTagBadge=true, showCatBadge=false){
+  if(!evs.length) return emptyRow(cols, LW, indent);
+  return evs.map(ev=>{
+    const g=GROUPS[ev.group]||GROUPS[grp];
+    const ttDates=`${fmtFull(ev.start)} → ${fmtFull(ev.end)}`;
+    const ttOwner=ev.owner||'—';
+    const ttFin=(ev.fins&&ev.fins.length)?ev.fins.join(', '):'—';
+    const tagLabel=(showTagBadge && ev.tags&&ev.tags.length)?ev.tags.join(', '):'';
+    const tagPill=tagLabel?`<span style="background:rgba(255,255,255,.22);border-radius:3px;padding:0 4px;font-size:9px;margin-left:5px;flex-shrink:0;letter-spacing:.02em">${tagLabel}</span>`:'';
+    const dot=`<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${g.col};margin-right:5px;flex-shrink:0"></span>`;
+    const catName=g.label.replace(/^\S+\s/,'');
+    const catBadge=showCatBadge?`<span style="font-family:var(--mono);font-size:9px;background:${g.bg};color:${g.text};border-radius:3px;padding:0 5px;margin-left:5px;flex-shrink:0;font-weight:700">${catName}</span>`:'';
+    const tagBadge=tagLabel?`<span style="font-family:var(--mono);font-size:9px;color:var(--ink-soft);margin-left:4px;background:var(--lime-soft);border-radius:3px;padding:0 4px;flex-shrink:0">${tagLabel}</span>`:'';
+    const pilledBar=tagPill;
+    const isPast = pd(ev.end) < new Date(new Date().setHours(0,0,0,0));
+    const fadeStyle = isPast ? 'opacity:0.5;' : '';
+
+    // Find contiguous run of overlapping columns
+    // Build cells: single colspan td for the bar span, individual tds elsewhere
+    let cells='';
+    let ci=0;
+    while(ci<cols.length){
+      const col=cols[ci];
+      const over=evOverlapsCol(ev,col);
+      if(!over){
+        cells+=`<td class="bar-cell${col.isToday?' today-col':''}" style="width:${cw}px"></td>`;
+        ci++;
+      } else {
+        // Find end of this contiguous run
+        let end=ci;
+        while(end<cols.length && evOverlapsCol(ev,cols[end])) end++;
+        const span=end-ci;
+        const hasToday=cols.slice(ci,end).some(c=>c.isToday);
+        const rl='border-radius:4px';
+        cells+=`<td colspan="${span}" class="bar-cell${hasToday?' today-col':''}" style="width:${cw*span}px;min-width:${cw*span}px;position:relative">
+          <div class="bar ${ev.group}" data-evid="${ev.id}"
+            data-tt-name="${ev.name.replace(/"/g,'&quot;')}"
+            data-tt-dates="${ttDates}"
+            data-tt-owner="${ttOwner}"
+            data-tt-fin="${ttFin}"
+            style="left:2px;right:2px;${rl};position:absolute;top:4px;bottom:4px;${fadeStyle}"
+          ><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0">${ev.name}</span>${pilledBar}</div>
+        </td>`;
+        ci=end;
+      }
+    }
+
+    return `<tr class="gt-act">
+      <td class="row-label-td" style="padding-left:${indent?42:28}px" title="${ev.name}">
+        ${dot}<span style="overflow:hidden;text-overflow:ellipsis">${ev.name}</span>${catBadge}${tagBadge}
+      </td>${cells}</tr>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════
+// FILTER
+// ══════════════════════════════════════════════
+function visibleEvents(){
+  return events.filter(ev=>{
+    const catOk=catFilters.has('all')||catFilters.has(ev.group);
+    // No fins set = passes any financial filter (unassigned shouldn't be hidden)
+    const noFin=!ev.fins||!ev.fins.length;
+    const finOk=finFilters.has('all')||noFin||(ev.fins||[]).some(f=>finFilters.has(f));
+    return catOk&&finOk;
+  });
+}
+function toggleCatFilter(f){
+  const chips=document.querySelectorAll('.fchip[class*="fc-"]');
+  if(f==='all'){catFilters=new Set(['all']);chips.forEach(c=>c.classList.toggle('on',c.classList.contains('fc-all')));}
+  else{
+    catFilters.delete('all');document.querySelector('.fchip.fc-all').classList.remove('on');
+    const chip=document.querySelector(`.fchip.fc-${f}`);
+    catFilters.has(f)?(catFilters.delete(f),chip?.classList.remove('on')):(catFilters.add(f),chip?.classList.add('on'));
+    if(!catFilters.size){catFilters.add('all');document.querySelector('.fchip.fc-all').classList.add('on');}
+  }
+  render();
+}
+function toggleFinFilter(f){
+  if(f==='all'){finFilters=new Set(['all']);document.querySelectorAll('.fchip[class*="ff-"]').forEach(c=>c.classList.toggle('on',c.classList.contains('ff-all')));}
+  else{
+    finFilters.delete('all');document.querySelector('.fchip.ff-all').classList.remove('on');
+    const map={Paid:'paid',Reactivation:'reactivation',Referrals:'referrals'};
+    const chip=document.querySelector(`.fchip.ff-${map[f]}`);
+    finFilters.has(f)?(finFilters.delete(f),chip?.classList.remove('on')):(finFilters.add(f),chip?.classList.add('on'));
+    if(!finFilters.size){finFilters.add('all');document.querySelector('.fchip.ff-all').classList.add('on');}
+  }
+  render();
+}
+
+// ══════════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════════
+function shiftView(dir){
+  if(zoom==='day')     viewStart=addD(viewStart,dir*30);
+  else if(zoom==='week') weekShift+=dir*13;
+  else viewStart=new Date(viewStart.getFullYear()+dir,0,1);
+  scrollOnNextRender=true; render();
+}
+function jumpToday(){
+  const now=new Date();
+  weekShift=0;
+  if(zoom==='day') viewStart=now;
+  else viewStart=startOfYear(now);
+  scrollOnNextRender=true; render();
+}
+function setZoom(z){
+  zoom=z;
+  document.querySelectorAll('.ztab').forEach((t,i)=>t.classList.toggle('on',['day','week','month','quarter'][i]===z));
+  const now=new Date();
+  if(z==='day') { /* day view always centred on today */ }
+  else if(z==='week'){ weekShift=0; viewStart=startOfWeek(now); }
+  else viewStart=startOfYear(now);
+  scrollOnNextRender=true; render();
+}
+function setMode(m){
+  mode=m;
+  collapsed={}; // reset collapsed state on mode switch
+  document.getElementById('tab-group').classList.toggle('on',m==='group');
+  document.getElementById('tab-campaign').classList.toggle('on',m==='campaign');
+  scrollOnNextRender=true; render();
+}
+
+// ══════════════════════════════════════════════
+// ADD FORM
+// ══════════════════════════════════════════════
+function toggleForm(){
+  const f=document.getElementById('addForm'),t=document.getElementById('addToggle');
+  const open=f.classList.toggle('show');
+  t.classList.toggle('open',open);
+  document.getElementById('addHint').textContent=open?'Press Cancel to close':'Click to expand';
+  if(open){
+    document.getElementById('f-name').focus();
+    // Scroll form into view on narrow screens
+    setTimeout(()=>document.getElementById('addForm').scrollIntoView({behavior:'smooth',block:'nearest'}),100);
+  }
+}
+function onGroupChange(){
+  const grp=document.getElementById('f-group').value;
+  const ch=document.getElementById('f-channel');
+  ch.innerHTML='<option value="">All / N/A</option>';
+  channelsFor(grp).forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; ch.appendChild(o); });
+  // Auto-select default channel for discount/pricing
+  if(grp==='discount'||grp==='pricing') ch.value='Pricing & Discounts';
+  document.getElementById('panel-discount').classList.toggle('show',grp==='discount');
+  document.getElementById('panel-pricing').classList.toggle('show',grp==='pricing');
+}
+function togglePriceChangeFields(){
+  document.getElementById('price-change-fields').classList.toggle('show',document.getElementById('f-is-price-change').checked);
+}
+function toggleFin(btn){ btn.classList.toggle('sel'); const v=btn.dataset.val; formFins.has(v)?formFins.delete(v):formFins.add(v); }
+
+// Campaign tag — restricted dropdown
+function addTagFromSelect(){
+  const sel=document.getElementById('f-tag-select');
+  const v=sel.value; if(!v) return;
+  if(!formTags.includes(v)){ formTags.push(v); renderFormTags(); }
+  sel.value='';
+}
+function renderFormTags(){
+  document.getElementById('f-tag-chips').innerHTML=formTags.map((t,i)=>`<span class="tag-chip">${t}<button class="rm" onclick="removeFormTag(${i})">×</button></span>`).join('');
+}
+function removeFormTag(i){ formTags.splice(i,1); renderFormTags(); }
+
+function refreshFormDropdowns(){
+  // Tags dropdown
+  const ts=document.getElementById('f-tag-select');
+  ts.innerHTML='<option value="">Select a campaign tag…</option>';
+  allTags().forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; ts.appendChild(o); });
+  // Owner dropdown
+  const os=document.getElementById('f-owner');
+  const cur=os.value;
+  os.innerHTML='<option value="">Select owner…</option>';
+  config.owners.forEach(o=>{ const opt=document.createElement('option'); opt.value=o; opt.textContent=o; if(o===cur) opt.selected=true; os.appendChild(opt); });
+}
+
+function submitEvent(){
+  const name=document.getElementById('f-name').value.trim();
+  const group=document.getElementById('f-group').value;
+  const channel=document.getElementById('f-channel').value;
+  const start=document.getElementById('f-start').value;
+  const isPriceChange=document.getElementById('f-is-price-change').checked;
+  const priceChangeDate=document.getElementById('f-price-change-date').value;
+  // End date optional for pricing-change-only entries
+  let end=document.getElementById('f-end').value;
+  if(!end && isPriceChange && priceChangeDate) end=priceChangeDate;
+  const owner=document.getElementById('f-owner').value;
+  const notes=document.getElementById('f-notes').value.trim();
+  const discountNotes=document.getElementById('f-discount-notes').value.trim();
+  const pricingNotes=document.getElementById('f-pricing-notes').value.trim();
+  const priceChangeDesc=document.getElementById('f-price-change-desc').value.trim();
+  const err=document.getElementById('form-err');
+  if(!name||!group||!start||!end){ err.textContent='⚠ Name, Category, Start & End are required'; return; }
+  if(start>end){ err.textContent='⚠ End must be on or after Start'; return; }
+  if(isPriceChange&&!priceChangeDate){ err.textContent='⚠ Please enter the price change date'; return; }
+  err.textContent='';
+  const ev={id:uid(),name,group,channel,start,end,fins:[...formFins],tags:[...formTags],owner,notes,discountNotes,pricingNotes,isPriceChange,priceChangeDate,priceChangeDesc};
+  events.push(ev);
+  // Write to Airtable async
+  saveEv_at(ev, null).catch(e=>showAtError('Save failed: '+e.message));
+  resetForm(); launchConfetti(); toggleForm(); render();
+}
+
+function resetForm(){
+  ['f-name','f-notes','f-discount-notes','f-pricing-notes','f-price-change-date','f-price-change-desc','f-tag-new-inline'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  document.getElementById('f-group').selectedIndex=0;
+  document.getElementById('f-channel').innerHTML='<option value="">All / N/A</option>';
+  document.getElementById('f-owner').value='';
+  document.getElementById('f-tag-select').value='';
+  document.getElementById('f-start').value=ds(new Date());
+  document.getElementById('f-end').value=ds(new Date());
+  document.getElementById('f-is-price-change').checked=false;
+  document.getElementById('price-change-fields').classList.remove('show');
+  document.getElementById('panel-discount').classList.remove('show');
+  document.getElementById('panel-pricing').classList.remove('show');
+  document.querySelectorAll('.fin-opt').forEach(b=>b.classList.remove('sel'));
+  formTags=[]; formFins=new Set(); renderFormTags();
+}
+
+// ══════════════════════════════════════════════
+// SETTINGS
+// ══════════════════════════════════════════════
+function openSettings(){
+  document.getElementById('settings-panel').classList.add('show');
+  document.getElementById('settings-overlay').classList.add('show');
+  renderSettingsLists();
+}
+function closeSettings(){
+  document.getElementById('settings-panel').classList.remove('show');
+  document.getElementById('settings-overlay').classList.remove('show');
+}
+function renderSettingsLists(){
+  const tl=document.getElementById('sp-tags-list');
+  const ta=allTags();
+  tl.innerHTML=ta.map((t,i)=>{
+    const isPerm=PERMANENT_TAGS.includes(t);
+    const delBtn=isPerm
+      ?`<span style="font-family:var(--mono);font-size:9px;color:var(--ink-soft);padding:2px 7px;background:var(--line);border-radius:4px">built-in</span>`
+      :`<button class="si-del" onclick="delUserTag(${config.tags.indexOf(t)})">×</button>`;
+    return `<div class="sp-item"><span class="si-val">${isPerm?'📌':''} ${t}</span>${delBtn}</div>`;
+  }).join('') || '<div style="font-size:12px;color:var(--ink-soft);padding:4px 0;font-style:italic">No tags yet</div>';
+  const ol=document.getElementById('sp-owners-list');
+  ol.innerHTML=config.owners.length
+    ?config.owners.map((o,i)=>`<div class="sp-item"><span class="si-val">👤 ${o}</span><button class="si-del" onclick="delSetting('owners',${i})">×</button></div>`).join('')
+    :'<div style="font-size:12px;color:var(--ink-soft);padding:4px 0;font-style:italic">No owners yet</div>';
+  const cl=document.getElementById('sp-channels-list');
+  cl.innerHTML=config.customChannels.length
+    ?config.customChannels.map((c,i)=>`<div class="sp-item"><span class="si-val"><span style="font-size:10px;font-family:var(--mono);background:var(--line);padding:1px 6px;border-radius:3px;margin-right:6px">${GROUPS[c.group]?.label||c.group}</span>${c.name}</span><button class="si-del" onclick="delSetting('channels',${i})">×</button></div>`).join('')
+    :'<div style="font-size:12px;color:var(--ink-soft);padding:4px 0;font-style:italic">No custom channels yet</div>';
+  refreshFormDropdowns();
+}
+function addSettingItem(type){
+  if(type==='tags'){
+    const v=document.getElementById('sp-tag-input').value.trim(); if(!v) return;
+    if(!allTags().includes(v)){
+      config.tags.push(v);
+      saveConfigItem('tag',v).catch(e=>showAtError('Save failed: '+e.message));
+    }
+    document.getElementById('sp-tag-input').value='';
+  } else if(type==='owners'){
+    const v=document.getElementById('sp-owner-input').value.trim(); if(!v) return;
+    if(!config.owners.includes(v)){
+      config.owners.push(v);
+      saveConfigItem('owner',v).catch(e=>showAtError('Save failed: '+e.message));
+    }
+    document.getElementById('sp-owner-input').value='';
+  } else if(type==='channels'){
+    const grp=document.getElementById('sp-ch-group').value;
+    const name=document.getElementById('sp-ch-input').value.trim(); if(!name) return;
+    if(!config.customChannels.find(c=>c.group===grp&&c.name===name)){
+      const ch={group:grp,name};
+      config.customChannels.push(ch);
+      saveConfigItem('channel',JSON.stringify(ch)).catch(e=>showAtError('Save failed: '+e.message));
+    }
+    document.getElementById('sp-ch-input').value='';
+  }
+  renderSettingsLists();
+}
+function delUserTag(i){
+  const tag=config.tags[i];
+  config.tags.splice(i,1);
+  events.forEach(ev=>{ if(ev.tags) ev.tags=ev.tags.filter(t=>t!==tag); });
+  atListAll(AT_CFG).then(recs=>{
+    const rec=recs.find(r=>r.fields['Key']==='tag'&&r.fields['Value']===tag);
+    if(rec) deleteConfigItem(rec.id).catch(e=>console.warn('Delete config failed:',e));
+    events.forEach(ev=>{ if(ev._recId) saveEv_at(ev,ev._recId).catch(()=>{}); });
+  }).catch(e=>showAtError('Delete failed: '+e.message));
+  renderSettingsLists(); render();
+}
+function delSetting(type,i){
+  let key, val;
+  if(type==='owners'){ val=config.owners[i]; key='owner'; config.owners.splice(i,1); }
+  else if(type==='channels'){ val=JSON.stringify(config.customChannels[i]); key='channel'; config.customChannels.splice(i,1); }
+  if(key){
+    atListAll(AT_CFG).then(recs=>{
+      const rec=recs.find(r=>r.fields['Key']===key&&r.fields['Value']===val);
+      if(rec) deleteConfigItem(rec.id).catch(e=>console.warn(e));
+    }).catch(e=>showAtError('Delete failed: '+e.message));
+  }
+  renderSettingsLists();
+}
+
+// ══════════════════════════════════════════════
+// EDIT MODAL
+// ══════════════════════════════════════════════
+let editingId = null;
+let editFins  = new Set();
+let editTags  = [];
+
+function addEditTag(){
+  const sel=document.getElementById('ef-tag-select');
+  const v=sel.value; if(!v) return;
+  if(!editTags.includes(v)){ editTags.push(v); renderEditTags(); }
+  sel.value='';
+}
+function removeEditTag(i){ editTags.splice(i,1); renderEditTags(); }
+function renderEditTags(){
+  document.getElementById('ef-tag-chips').innerHTML=editTags.map((t,i)=>
+    `<span class="tag-chip" style="background:rgba(6,122,70,.12);border-color:rgba(6,122,70,.3);color:var(--green)">${t}<button class="rm" style="color:var(--green)" onclick="removeEditTag(${i})">×</button></span>`
+  ).join('');
+}
+
+function showPopup(id){
+  const ev=events.find(e=>e.id===id); if(!ev) return;
+  editingId=id;
+  editFins=new Set(ev.fins||[]);
+  editTags=[...(ev.tags||[])];
+  renderEditTags();
+
+  const g=GROUPS[ev.group]||{label:ev.group,col:'#888',bg:'#eee',text:'#333'};
+  const badge=document.getElementById('pop-badge');
+  badge.style.cssText=`background:${g.bg};color:${g.text};font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:10px;display:inline-flex;align-items:center;gap:4px`;
+  badge.innerHTML=`<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${g.col}"></span>Edit Activity`;
+
+  // Populate fields
+  document.getElementById('ef-name').value=ev.name||'';
+  document.getElementById('ef-group').value=ev.group||'brand';
+  document.getElementById('ef-start').value=ev.start||'';
+  document.getElementById('ef-end').value=ev.end||'';
+  document.getElementById('ef-notes').value=ev.notes||'';
+  document.getElementById('ef-discount-notes').value=ev.discountNotes||'';
+  document.getElementById('ef-pricing-notes').value=ev.pricingNotes||'';
+  document.getElementById('ef-price-change-date').value=ev.priceChangeDate||'';
+  document.getElementById('ef-price-change-desc').value=ev.priceChangeDesc||'';
+  const ipc=document.getElementById('ef-is-price-change');
+  ipc.checked=!!ev.isPriceChange;
+  document.getElementById('ef-price-change-fields').style.display=ev.isPriceChange?'block':'none';
+  ipc.onchange=()=>{ document.getElementById('ef-price-change-fields').style.display=ipc.checked?'block':'none'; };
+
+  // Fin opts
+  document.querySelectorAll('#ef-fin-multi .fin-opt').forEach(b=>{
+    b.classList.toggle('sel',(ev.fins||[]).includes(b.dataset.val));
+  });
+
+  // Channel dropdown
+  editGroupChange(ev.channel);
+
+  // Owner dropdown — if saved owner no longer in settings list, show it with a warning
+  const os=document.getElementById('ef-owner');
+  os.innerHTML='<option value="">No owner</option>';
+  config.owners.forEach(o=>{ const opt=document.createElement('option'); opt.value=o; opt.textContent=o; if(o===ev.owner) opt.selected=true; os.appendChild(opt); });
+  if(ev.owner&&!config.owners.includes(ev.owner)){
+    const opt=document.createElement('option'); opt.value=ev.owner; opt.textContent=`${ev.owner} (removed from Settings)`; opt.selected=true; os.appendChild(opt);
+  }
+
+  // Tag dropdown
+  const ts=document.getElementById('ef-tag-select');
+  ts.innerHTML='<option value="">Add a tag…</option>';
+  allTags().forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; ts.appendChild(o); });
+
+  // Conditional panels
+  document.getElementById('ef-panel-discount').style.display=ev.group==='discount'?'block':'none';
+  document.getElementById('ef-panel-pricing').style.display=ev.group==='pricing'?'block':'none';
+
+  document.getElementById('pop-del').onclick=()=>deleteEvent(id);
+  document.getElementById('overlay').classList.add('show');
+  document.getElementById('ef-name').focus();
+}
+
+function editGroupChange(currentChannel){
+  const grp=document.getElementById('ef-group').value;
+  const ch=document.getElementById('ef-channel');
+  ch.innerHTML='<option value="">All / N/A</option>';
+  channelsFor(grp).forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; ch.appendChild(o); });
+  if(currentChannel) ch.value=currentChannel;
+  else if(grp==='discount'||grp==='pricing') ch.value='Pricing & Discounts';
+  document.getElementById('ef-panel-discount').style.display=grp==='discount'?'block':'none';
+  document.getElementById('ef-panel-pricing').style.display=grp==='pricing'?'block':'none';
+}
+
+function toggleEditFin(btn){
+  btn.classList.toggle('sel');
+  const v=btn.dataset.val;
+  editFins.has(v)?editFins.delete(v):editFins.add(v);
+}
+
+function saveEdit(){
+  const ev=events.find(e=>e.id===editingId); if(!ev) return;
+  const name=document.getElementById('ef-name').value.trim();
+  const start=document.getElementById('ef-start').value;
+  const end=document.getElementById('ef-end').value;
+  if(!name||!start||!end){ alert('Name, Start and End are required'); return; }
+  if(start>end){ alert('End must be on or after Start'); return; }
+  ev.name=name;
+  ev.group=document.getElementById('ef-group').value;
+  ev.channel=document.getElementById('ef-channel').value;
+  ev.start=start;
+  ev.end=end;
+  ev.owner=document.getElementById('ef-owner').value;
+  ev.fins=[...editFins];
+  ev.tags=[...editTags];
+  ev.notes=document.getElementById('ef-notes').value.trim();
+  ev.discountNotes=document.getElementById('ef-discount-notes').value.trim();
+  ev.pricingNotes=document.getElementById('ef-pricing-notes').value.trim();
+  ev.isPriceChange=document.getElementById('ef-is-price-change').checked;
+  ev.priceChangeDate=document.getElementById('ef-price-change-date').value;
+  ev.priceChangeDesc=document.getElementById('ef-price-change-desc').value.trim();
+  saveEv_at(ev, ev._recId).catch(e=>showAtError('Save failed: '+e.message));
+  closePopup(); render();
+}
+
+function closeOverlay(e){ if(e.target===document.getElementById('overlay')) closePopup(); }
+function closePopup(){
+  if(editingId){
+    const ev=events.find(e=>e.id===editingId);
+    if(ev){
+      const nameChanged=document.getElementById('ef-name').value.trim()!==ev.name;
+      const startChanged=document.getElementById('ef-start').value!==ev.start;
+      const endChanged=document.getElementById('ef-end').value!==ev.end;
+      if(nameChanged||startChanged||endChanged){
+        if(!confirm('You have unsaved changes. Close without saving?')) return;
+      }
+    }
+  }
+  document.getElementById('overlay').classList.remove('show');
+  editingId=null; editTags=[]; editFins=new Set();
+}
+function deleteEvent(id){
+  if(!confirm('Delete this activity?')) return;
+  const ev=events.find(e=>e.id===id);
+  events=events.filter(e=>e.id!==id);
+  // Close popup directly without unsaved-changes check
+  document.getElementById('overlay').classList.remove('show');
+  editingId=null; editTags=[]; editFins=new Set();
+  // Delete from Airtable — try _recId first, fall back to searching by calId
+  if(ev?._recId){
+    deleteEv_at(ev._recId).catch(e=>showAtError('Delete failed: '+e.message));
+  } else if(ev){
+    // Find the Airtable record by Cal ID field
+    atListAll(AT_ACTS).then(recs=>{
+      const rec=recs.find(r=>r.fields[AT_FIELDS.calId]===ev.id);
+      if(rec) deleteEv_at(rec.id).catch(e=>showAtError('Delete failed: '+e.message));
+    }).catch(e=>showAtError('Delete failed: '+e.message));
+  }
+  render();
+}
+
+// ══════════════════════════════════════════════
+// CONFETTI
+// ══════════════════════════════════════════════
+function launchConfetti(){
+  const canvas=document.getElementById('confetti-canvas');
+  const ctx=canvas.getContext('2d');
+  canvas.style.display='block';
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  const COLORS=['#A9CF38','#067A46','#3D6FA8','#DF9A2E','#7B5EA7','#F2F7EC','#fff'];
+  const particles=Array.from({length:90},()=>({
+    x:Math.random()*canvas.width,
+    y:-10-Math.random()*40,
+    r:Math.random()*5+3,
+    color:COLORS[Math.floor(Math.random()*COLORS.length)],
+    vx:(Math.random()-0.5)*4,
+    vy:Math.random()*4+2,
+    spin:Math.random()*0.2-0.1,
+    angle:Math.random()*Math.PI*2,
+    shape:Math.random()>0.5?'rect':'circle',
+    w:Math.random()*8+4,
+    h:Math.random()*4+2,
+    opacity:1,
+  }));
+  let frame=0;
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy; p.angle+=p.spin; p.opacity=Math.max(0,1-frame/70);
+      ctx.save(); ctx.globalAlpha=p.opacity; ctx.fillStyle=p.color;
+      ctx.translate(p.x,p.y); ctx.rotate(p.angle);
+      if(p.shape==='circle'){ ctx.beginPath(); ctx.arc(0,0,p.r,0,Math.PI*2); ctx.fill(); }
+      else{ ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); }
+      ctx.restore();
+    });
+    frame++;
+    if(frame<90) requestAnimationFrame(draw);
+    else{ ctx.clearRect(0,0,canvas.width,canvas.height); canvas.style.display='none'; }
+  }
+  draw();
+}
+
+// ══════════════════════════════════════════════
+// TOOLTIP
+// ══════════════════════════════════════════════
+(function(){
+  const tt=document.getElementById('bar-tooltip');
+  let hideTimer;
+  document.addEventListener('mouseover', e=>{
+    const bar=e.target.closest('[data-tt-name]');
+    if(!bar){ hideTimer=setTimeout(()=>tt.classList.remove('show'),80); return; }
+    clearTimeout(hideTimer);
+    document.getElementById('tt-name').textContent=bar.dataset.ttName||'';
+    document.getElementById('tt-dates').textContent=bar.dataset.ttDates||'—';
+    document.getElementById('tt-owner').textContent=bar.dataset.ttOwner||'—';
+    document.getElementById('tt-fin').textContent=bar.dataset.ttFin||'—';
+    const rect=bar.getBoundingClientRect();
+    let left=rect.left+8, top=rect.bottom+6;
+    if(left+260>window.innerWidth) left=window.innerWidth-268;
+    if(top+110>window.innerHeight) top=rect.top-116;
+    tt.style.left=left+'px'; tt.style.top=top+'px';
+    tt.classList.add('show');
+  });
+  document.addEventListener('mouseout',e=>{
+    if(!e.target.closest('[data-tt-name]')) hideTimer=setTimeout(()=>tt.classList.remove('show'),80);
+  });
+  document.addEventListener('click',()=>tt.classList.remove('show'));
+})();
+
+// ══════════════════════════════════════════════
+function toggleCollapseAll(){
+  const btn=document.getElementById('collapse-all-btn');
+  const isCollapsing = btn.textContent==='Collapse All';
+  // Get all current section keys from the rendered table
+  const keys=[...document.querySelectorAll('[data-sec]')].map(el=>el.dataset.sec);
+  keys.forEach(k=>{ collapsed[k]=isCollapsing; });
+  btn.textContent=isCollapsing?'Expand All':'Collapse All';
+  render();
+  // Restore button text after render (render resets nothing, but re-query to be safe)
+  document.getElementById('collapse-all-btn').textContent=isCollapsing?'Expand All':'Collapse All';
+}
+
+// ══════════════════════════════════════════════
+// INLINE ADD TAG ───────────────────────────
+function addNewTagInline(e){
+  if(e.key!=='Enter') return;
+  e.preventDefault();
+  const input=document.getElementById('f-tag-new-inline');
+  const val=input.value.trim(); if(!val) return;
+  // Save to config so it's locked in and available everywhere
+  if(!allTags().includes(val)){
+    config.tags.push(val);
+    saveCfg();
+    refreshFormDropdowns();
+    renderSettingsLists();
+  }
+  // Add as chip if not already selected
+  if(!formTags.includes(val)){ formTags.push(val); renderFormTags(); }
+  input.value='';
+}
+
+// ── INLINE ADD OWNER ─────────────────────────
+// ══════════════════════════════════════════════
+function addNewOwnerInline(e, selectId, inputId){
+  if(e.key!=='Enter') return;
+  e.preventDefault();
+  const input=document.getElementById(inputId);
+  const name=input.value.trim(); if(!name) return;
+  if(!config.owners.includes(name)){
+    config.owners.push(name);
+    saveCfg();
+    refreshFormDropdowns();
+  }
+  // Select the new owner in the target dropdown
+  const sel=document.getElementById(selectId);
+  // If option not there yet (edit modal has its own list), add it
+  if(![...sel.options].some(o=>o.value===name)){
+    const opt=document.createElement('option'); opt.value=name; opt.textContent=name; sel.appendChild(opt);
+  }
+  sel.value=name;
+  input.value='';
+}
+
+// ══════════════════════════════════════════════
+// DUPLICATE ACTIVITY
+// ══════════════════════════════════════════════
+function duplicateActivity(){
+  const ev=events.find(e=>e.id===editingId); if(!ev) return;
+  // Close popup silently (bypass unsaved-changes check)
+  document.getElementById('overlay').classList.remove('show');
+  editingId=null; editTags=[]; editFins=new Set();
+  // Open add form pre-filled
+  if(!document.getElementById('addForm').classList.contains('show')) toggleForm();
+  document.getElementById('f-name').value=ev.name+' (copy)';
+  document.getElementById('f-group').value=ev.group;
+  onGroupChange();
+  setTimeout(()=>{
+    document.getElementById('f-channel').value=ev.channel||'';
+  },0);
+  document.getElementById('f-start').value=ev.start;
+  document.getElementById('f-end').value=ev.end;
+  document.getElementById('f-owner').value=ev.owner||'';
+  document.getElementById('f-notes').value=ev.notes||'';
+  document.getElementById('f-discount-notes').value=ev.discountNotes||'';
+  document.getElementById('f-pricing-notes').value=ev.pricingNotes||'';
+  document.getElementById('f-is-price-change').checked=!!ev.isPriceChange;
+  togglePriceChangeFields();
+  document.getElementById('f-price-change-date').value=ev.priceChangeDate||'';
+  document.getElementById('f-price-change-desc').value=ev.priceChangeDesc||'';
+  formFins=new Set(ev.fins||[]);
+  document.querySelectorAll('#f-fin-multi .fin-opt').forEach(b=>{
+    b.classList.toggle('sel',(ev.fins||[]).includes(b.dataset.val));
+  });
+  formTags=[...(ev.tags||[])];
+  renderFormTags();
+  setTimeout(()=>document.getElementById('addForm').scrollIntoView({behavior:'smooth',block:'nearest'}),150);
+}
+
+// ══════════════════════════════════════════════
+// CAMPAIGN BUILDER WIZARD
+// ══════════════════════════════════════════════
+let wizStep = 1;
+let wizFins = new Set();
+let wizSelectedChannels = new Set(); // keys: "group|channel"
+let wizRows = []; // [{name, group, channel, start, end}]
+
+const ALL_WIZARD_CHANNELS = ()=>{
+  const list = [];
+  Object.keys(BASE_CHANNELS).forEach(grp=>{
+    channelsFor(grp).forEach(ch=>list.push({grp,ch}));
+  });
+  return list;
+};
+
+function openWizard(){
+  wizStep=1; wizFins=new Set(); wizSelectedChannels=new Set(); wizRows=[];
+  // Populate tag dropdown
+  const ts=document.getElementById('wiz-tag');
+  ts.innerHTML='<option value="">Select tag…</option>';
+  allTags().forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; ts.appendChild(o); });
+  // Populate owner dropdown
+  const os=document.getElementById('wiz-owner');
+  os.innerHTML='<option value="">Select owner…</option>';
+  config.owners.forEach(o=>{ const opt=document.createElement('option'); opt.value=o; opt.textContent=o; os.appendChild(opt); });
+  // Reset fin opts
+  document.querySelectorAll('#wiz-fin-multi .fin-opt').forEach(b=>b.classList.remove('sel'));
+  document.getElementById('wiz-notes').value='';
+  document.getElementById('wiz-start').value='';
+  document.getElementById('wiz-end').value='';
+  document.getElementById('wiz-tag-new').value='';
+  document.getElementById('wiz-owner-new').value='';
+  document.getElementById('wiz-step1-err').style.display='none';
+  renderWizStep();
+  document.getElementById('wiz-overlay').classList.add('show');
+}
+
+function wizAddNewTag(e){
+  if(e.key!=='Enter') return;
+  e.preventDefault();
+  const input=document.getElementById('wiz-tag-new');
+  const val=input.value.trim(); if(!val) return;
+  // Add to config if new
+  if(!allTags().includes(val)){
+    config.tags.push(val);
+    saveCfg();
+    refreshFormDropdowns();
+    renderSettingsLists();
+  }
+  // Add to wizard dropdown and select it
+  const sel=document.getElementById('wiz-tag');
+  if(![...sel.options].some(o=>o.value===val)){
+    const o=document.createElement('option'); o.value=val; o.textContent=val; sel.appendChild(o);
+  }
+  sel.value=val;
+  input.value='';
+}
+
+function wizAddNewOwner(e){
+  if(e.key!=='Enter') return;
+  e.preventDefault();
+  const input=document.getElementById('wiz-owner-new');
+  const val=input.value.trim(); if(!val) return;
+  if(!config.owners.includes(val)){
+    config.owners.push(val);
+    saveCfg();
+    refreshFormDropdowns();
+  }
+  const sel=document.getElementById('wiz-owner');
+  if(![...sel.options].some(o=>o.value===val)){
+    const o=document.createElement('option'); o.value=val; o.textContent=val; sel.appendChild(o);
+  }
+  sel.value=val;
+  input.value='';
+}
+
+function wizAddCustomChannel(e){
+  if(e.key!=='Enter') return;
+  e.preventDefault();
+  const input=document.getElementById('wiz-custom-ch');
+  const name=input.value.trim(); if(!name) return;
+  // Add as a custom row directly — group it under 'growth' by default, user can edit in Step 3
+  const key=`custom|${name}`;
+  wizSelectedChannels.add(key);
+  // Store as custom entry
+  if(!wizRows.find(r=>r._key===key)){
+    const start=document.getElementById('wiz-start').value;
+    const end=document.getElementById('wiz-end').value;
+    const tag=document.getElementById('wiz-tag').value;
+    wizRows.push({_key:key,_custom:true,name:`${tag} — ${name}`,group:'growth',channel:name,start,end});
+  }
+  input.value='';
+  updateWizChCount();
+  // Flash confirmation
+  input.placeholder='Added! Type another or click Next →';
+  setTimeout(()=>{ input.placeholder='Type any channel name + Enter to add it'; },2000);
+}
+
+function wizGoToStep(n){
+  // Only allow navigating to steps already reached
+  if(n>wizStep) return;
+  if(n===wizStep) return;
+  wizStep=n;
+  renderWizStep();
+}
+function closeWizard(){
+  document.getElementById('wiz-overlay').classList.remove('show');
+}
+function toggleWizFin(btn){
+  btn.classList.toggle('sel');
+  const v=btn.dataset.val;
+  wizFins.has(v)?wizFins.delete(v):wizFins.add(v);
+}
+
+function renderWizStep(){
+  // Tabs
+  [1,2,3,4].forEach(i=>{
+    const tab=document.getElementById('wiz-tab-'+i);
+    tab.classList.remove('active','done');
+    if(i===wizStep) tab.classList.add('active');
+    else if(i<wizStep) tab.classList.add('done');
+  });
+  // Panels
+  [1,2,3,4].forEach(i=>{
+    document.getElementById('wiz-panel-'+i).classList.toggle('active',i===wizStep);
+  });
+  // Back btn
+  document.getElementById('wiz-back-btn').style.display=wizStep>1?'':'none';
+  // Next btn
+  const nb=document.getElementById('wiz-next-btn');
+  nb.textContent=wizStep===4?'📅 Add to Calendar':wizStep===3?'Review →':'Next →';
+  // Hint
+  const hints=['Fill in campaign details','Select the channels you want to include','Adjust dates or add extra activities per channel','Review and confirm'];
+  document.getElementById('wiz-footer-hint').textContent='Step '+wizStep+' of 4 — '+hints[wizStep-1];
+  // Step-specific renders
+  if(wizStep===2) renderWizChannelGrid();
+  if(wizStep===3) renderWizTuneTable();
+  if(wizStep===4) renderWizReview();
+}
+
+function wizNext(){
+  if(wizStep===1){
+    const tag=document.getElementById('wiz-tag').value;
+    const start=document.getElementById('wiz-start').value;
+    const end=document.getElementById('wiz-end').value;
+    const err=document.getElementById('wiz-step1-err');
+    if(!tag||!start||!end){ err.style.display='block'; return; }
+    if(start>end){ err.style.display='block'; err.textContent='⚠ End date must be on or after Start date'; return; }
+    err.style.display='none';
+    wizStep=2;
+  } else if(wizStep===2){
+    if(wizSelectedChannels.size===0){ alert('Please select at least one channel'); return; }
+    const start=document.getElementById('wiz-start').value;
+    const end=document.getElementById('wiz-end').value;
+    const tag=document.getElementById('wiz-tag').value;
+    const existingKeys=new Set(wizRows.map(r=>r._key));
+    wizSelectedChannels.forEach(key=>{
+      if(!existingKeys.has(key)){
+        const parts=key.split('|');
+        const grp=parts[0]==='custom'?'growth':parts[0];
+        const ch=parts.slice(1).join('|');
+        wizRows.push({_key:key,name:`${tag} — ${ch}`,group:grp,channel:ch,start,end});
+      }
+    });
+    // Remove rows for deselected non-extra channels
+    wizRows=wizRows.filter(r=>wizSelectedChannels.has(r._key)||r._extra||r._custom);
+    wizStep=3;
+  } else if(wizStep===3){
+    // Read current table values back into wizRows
+    readTuneTable();
+    wizStep=4;
+  } else if(wizStep===4){
+    // Create all activities
+    readTuneTable();
+    const tag=document.getElementById('wiz-tag').value;
+    const owner=document.getElementById('wiz-owner').value;
+    const notes=document.getElementById('wiz-notes').value.trim();
+    const newEvs=wizRows.map(row=>({
+      id:uid(), name:row.name, group:row.group, channel:row.channel,
+      start:row.start, end:row.end,
+      fins:[...wizFins], tags:[tag], owner, notes,
+      discountNotes:'', pricingNotes:'', isPriceChange:false, priceChangeDate:'', priceChangeDesc:''
+    }));
+    events.push(...newEvs);
+    // Write all to Airtable in parallel
+    Promise.all(newEvs.map(ev=>saveEv_at(ev,null))).catch(e=>showAtError('Save failed: '+e.message));
+    closeWizard(); launchConfetti(); render(); return;
+  }
+  renderWizStep();
+}
+
+function wizBack(){
+  if(wizStep>1){ wizStep--; renderWizStep(); }
+}
+
+// ── Step 2: Channel grid ──────────────────────
+function renderWizChannelGrid(){
+  const grid=document.getElementById('wiz-ch-grid');
+  const channels=ALL_WIZARD_CHANNELS();
+  let html='<div class="ch-grid">';
+  channels.forEach(({grp,ch})=>{
+    const key=`${grp}|${ch}`;
+    const sel=wizSelectedChannels.has(key);
+    const g=GROUPS[grp];
+    html+=`<div class="ch-card${sel?' selected':''}" onclick="toggleWizChannel('${key}')">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:4px">
+        <div>
+          <div class="ch-name">${ch}</div>
+          <div class="ch-cat" style="display:flex;align-items:center;gap:4px;margin-top:2px">
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${g.col}"></span>
+            ${g.label.replace(/^\S+\s/,'')}
+          </div>
+        </div>
+        <div class="ch-check">${sel?'✓':''}</div>
+      </div>
+    </div>`;
+  });
+  html+='</div>';
+  grid.innerHTML=html;
+  updateWizChCount();
+}
+
+function toggleWizChannel(key){
+  wizSelectedChannels.has(key)?wizSelectedChannels.delete(key):wizSelectedChannels.add(key);
+  renderWizChannelGrid();
+}
+function updateWizChCount(){
+  const n=wizSelectedChannels.size;
+  document.getElementById('wiz-ch-count').textContent=`${n} channel${n===1?'':'s'} selected`;
+}
+
+// ── Step 3: Tune table ────────────────────────
+function renderWizTuneTable(){
+  const tbody=document.getElementById('wiz-tune-body');
+  tbody.innerHTML=wizRows.map((row,i)=>{
+    const g=GROUPS[row.group]||{col:'#888',label:'',bg:'#eee',text:'#333'};
+    return `<tr id="wiz-row-${i}">
+      <td><input class="tune-input name-i" value="${row.name.replace(/"/g,'&quot;')}" onchange="wizRowChange(${i},'name',this.value)"></td>
+      <td><span class="cat-dot" style="background:${g.col}"></span><span style="font-size:11.5px;color:#C9D9C5">${g.label.replace(/^\S+\s/,'')}</span></td>
+      <td><span style="font-size:11.5px;color:#C9D9C5">${row.channel}</span></td>
+      <td><input type="date" class="tune-input date-i" value="${row.start}" onchange="wizRowChange(${i},'start',this.value)"></td>
+      <td><input type="date" class="tune-input date-i" value="${row.end}" onchange="wizRowChange(${i},'end',this.value)"></td>
+      <td>
+        <button class="btn-add-row" onclick="wizAddRow(${i})" title="Add another activity for this channel">+</button>
+        ${wizRows.length>1?`<button class="btn-del-row" onclick="wizDelRow(${i})" title="Remove">×</button>`:''}
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function wizRowChange(i,field,val){ wizRows[i][field]=val; }
+
+function wizAddRow(i){
+  readTuneTable();
+  const ref=wizRows[i];
+  wizRows.splice(i+1,0,{_key:ref._key,_extra:true,name:ref.name+' (2)',group:ref.group,channel:ref.channel,start:ref.start,end:ref.end});
+  renderWizTuneTable();
+}
+function wizDelRow(i){
+  readTuneTable();
+  wizRows.splice(i,1);
+  renderWizTuneTable();
+}
+function readTuneTable(){
+  document.querySelectorAll('#wiz-tune-body tr').forEach((tr,i)=>{
+    if(!wizRows[i]) return;
+    const inputs=tr.querySelectorAll('input');
+    wizRows[i].name=inputs[0].value;
+    wizRows[i].start=inputs[1].value;
+    wizRows[i].end=inputs[2].value;
+  });
+}
+
+// ── Step 4: Review ────────────────────────────
+function renderWizReview(){
+  const tag=document.getElementById('wiz-tag').value;
+  const start=document.getElementById('wiz-start').value;
+  const end=document.getElementById('wiz-end').value;
+  const owner=document.getElementById('wiz-owner').value;
+  // Summary box
+  const cats=[...new Set(wizRows.map(r=>GROUPS[r.group]?.label.replace(/^\S+\s/,'')||r.group))];
+  document.getElementById('wiz-summary').innerHTML=`
+    <div><span class="wsb-n">${wizRows.length}</span><span class="wsb-l">activities to create</span></div>
+    <div><span class="wsb-n">${wizSelectedChannels.size}</span><span class="wsb-l">channels</span></div>
+    <div><span class="wsb-n" style="font-size:14px">${tag}</span><span class="wsb-l">campaign tag</span></div>
+    <div><span class="wsb-n" style="font-size:14px">${fmtFull(start)}</span><span class="wsb-l">→ ${fmtFull(end)}</span></div>
+    ${owner?`<div><span class="wsb-n" style="font-size:14px">${owner}</span><span class="wsb-l">owner</span></div>`:''}
+  `;
+  // Review list
+  document.getElementById('wiz-review-list').innerHTML=wizRows.map(row=>{
+    const g=GROUPS[row.group]||{col:'#888',bg:'#eee',text:'#333',label:row.group};
+    return `<div class="review-item">
+      <span class="cat-dot" style="background:${g.col}"></span>
+      <span class="ri-name">${row.name}</span>
+      <span class="ri-cat" style="background:${g.bg};color:${g.text}">${g.label.replace(/^\S+\s/,'')}</span>
+      <span class="ri-dates">${fmtFull(row.start)} → ${fmtFull(row.end)}</span>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════
+load();
+refreshFormDropdowns();
+document.getElementById('f-start').value=ds(new Date());
+document.getElementById('f-end').value=ds(new Date());
+initClickHandler();
+render();
+</script>
+</body>
+</html>
